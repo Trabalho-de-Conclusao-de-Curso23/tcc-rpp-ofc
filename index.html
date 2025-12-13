@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Átomo Digital</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="logo-box">
+      <!-- Logo -->
+      <img src="img/logoF.png" alt="Logo Átomo Digital">
+    </div>
+
+    <h2>Entrar</h2>
+
+    <form onsubmit="realizarLogin(event)">
+      <label>Usuário ou E-mail</label>
+      <input type="text" id="loginIdentificador" required>
+
+      <label>Senha</label>
+      <div class="senha-container">
+        <input type="password" id="loginSenha" required>
+        <span class="toggle-senha" onclick="toggleSenha('loginSenha', this)">👁</span>
+      </div>
+
+      <button class="btn">Login</button>
+
+      <p class="link">
+        Ainda não tem conta? <a href="cadastro.html">Cadastrar</a>
+      </p>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

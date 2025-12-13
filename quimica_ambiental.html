@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Química Ambiental</title>
+</head>
+
+<body>
+    <header class="header">
+
+        <h1 class="titulo-com-icone">
+            <img src="img/favicon.png" alt="Ícone">
+            Átomo Digital
+        </h1>
+
+        <!-- Botão do menu -->
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <!-- Menu retrátil -->
+        <nav class="menu" id="menu">
+            <a href="home.html">Início</a>
+            <a href="ligacoes_quimicas.html">Ligações Químicas</a>
+            <a href="funcoes_inorganicas.html">Funções Inorgânicas</a>
+            <a href="estequiometria.html">Estequiometria</a>
+            <a href="termoquimica.html">Termoquímica</a>
+            <a href="solucoes.html">Soluções e Concentração</a>
+            <a href="propriedades_coligativas.html">Propriedades Coligativas</a>
+            <a href="eletroquimica.html">Eletroquímica</a>
+            <a href="quimica_organica.html">Química Orgânica</a>
+            <a href="quimica_ambiental.html">Química Ambiental</a>
+            <a href="separacao.html">Separação de Misturas</a>
+            <a href="simulado_enem.html">Simulado ENEM</a>
+
+            <button class="logout-menu" onclick="logout()">Sair</button>
+        </nav>
+
+    </header>
+
+    <section class="content-card">
+        <div class="imagem-conteudo"><img src="img/quim_amb.jpg" alt="Química Ambiental" class="conteudo-img"></div>
+        <h2> Química Ambiental e Tratamento de Água (síntese didática)</h2>
+        <p><b> Questões ambientais ligadas à química aparecem com frequência no ENEM:
+                chuva ácida, efeito estufa, ozônio estratosférico, eutrofização e tratamento de
+                água são temas que exigem compreensão dos processos químicos e de suas
+                implicações.</b><br></p>
+        <ul>
+            <li>
+                <h3>Chuva ácida:</h3>
+            </li>
+            <p> Emissões de SO₂ e NOₓ (que podem vir de combustíveis fósseis)
+                oxidam-se e reagem com água formando H₂SO₄ e HNO₃; isso acidifica chuva e
+                solos — impactos em ecossistemas e construções.
+            </p>
+            <li>
+                <h3> Efeito estufa:</h3>
+            </li>
+            <p>Gases como CO₂, CH₄, N₂O retêm radiação térmica; fenômeno
+                natural intensificado por atividade humana → aumento de temperatura média
+                global. </p>
+            <li>
+                <h3> Ozônio estratosférico:</h3>
+            </li>
+            <p> Forma camada que bloqueia UV-B; CFCs e haletos liberam
+                Cl· que catalisa destruição do O₃.</p>
+            <li>
+                <h3> Eutrofização:</h3>
+            </li>
+            <p>Excesso de nutrientes (N, P) em corpos d’água promove proliferação
+                de algas; decomposição consome O₂, causando mortandade de peixes.</p>
+            <li>
+                <h3> Tratamento de água:</h3>
+            </li>
+            <p> Etapas típicas — pré-tratamento, coagulação, floculação,
+                decantação, filtração, desinfecção (cloração) e finalização (fluoretação conforme
+                políticas locais). Cloro atua como desinfetante oxidante; remoção de turbidez e
+                microrganismos é crítica.</p>
+        </ul>
+    </section>
+
+    <section class="questao">
+        <h2>Questão de Fixação</h2>
+        <p> A chuva ácida é, principalmente, consequência da emissão industrial e veicular
+            de:</p>
+
+        <div class="alternativas">
+            <button onclick="responderQuestao(this, false)"><strong>A)</strong>Monóxido de carbono (CO)</button>
+            <button onclick="responderQuestao(this, false)"><strong>B)</strong>Dióxido de carbono (CO₂)
+            </button>
+            <button onclick="responderQuestao(this, true)"><strong>C)</strong>Dióxido de enxofre (SO₂) e óxidos de
+                nitrogênio (NOₓ)</button>
+            <button onclick="responderQuestao(this, false)"><strong>D)</strong>Ozônio (O₃)</button>
+            <button onclick="responderQuestao(this, false)"><strong>E)</strong>Cloretos (Cl⁻)</button>
+        </div>
+
+        <p class="quiz-msg"></p>
+
+        <button class="btn-resolucao" onclick="mostrarResolucao(this)"> Ver resolução
+        </button>
+
+        <div class="resolucao" style="display: none;"> 
+            <p><strong>Resolução:</strong><br>
+                SO₂ e NOₓ, ao oxidarem na atmosfera e reagirem com vapor d’água,
+                formam ácidos (ex.: H₂SO₄, HNO₃) que se dissolvem nas gotas de chuva,
+                resultando em chuva ácida. CO₂ contribui para efeito estufa, não diretamente
+                chuva ácida; O₃ troposférico é poluente fotoquímico diferente; cloretos não são
+                causa típica de chuva ácida.
+                Por isso, a alternativa correta é a letra <strong>C</strong>.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        function verificar(botao, correta) {
+            const alternativas = document.querySelectorAll(".alt");
+            const msg = document.getElementById("quiz-msg");
+            const botaoResolucao = document.getElementById("btn-resolucao");
+
+            alternativas.forEach(a => {
+                a.disabled = true;
+            });
+
+            let letra = botao.textContent.trim().charAt(0);
+
+            if (letra === correta) {
+                botao.style.backgroundColor = "#2ecc71";
+                msg.textContent = "Resposta correta!";
+                msg.style.color = "#2ecc71";
+            } else {
+                botao.style.backgroundColor = "#e74c3c";
+                msg.textContent = "Resposta errada!";
+                msg.style.color = "#e74c3c";
+            }
+
+            botaoResolucao.style.display = "block";
+        }
+
+        function mostrarResolucao() {
+            document.getElementById("box-resolucao").style.display = "block";
+        }
+    </script>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

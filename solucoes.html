@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Soluções e Concentração</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+
+<body>
+    <header class="header">
+
+        <h1 class="titulo-com-icone">
+            <img src="img/favicon.png" alt="Ícone">
+            Átomo Digital
+        </h1>
+
+        <!-- Botão do menu -->
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <!-- Menu retrátil -->
+        <nav class="menu" id="menu">
+            <a href="home.html">Início</a>
+            <a href="ligacoes_quimicas.html">Ligações Químicas</a>
+            <a href="funcoes_inorganicas.html">Funções Inorgânicas</a>
+            <a href="estequiometria.html">Estequiometria</a>
+            <a href="termoquimica.html">Termoquímica</a>
+            <a href="solucoes.html">Soluções e Concentração</a>
+            <a href="propriedades_coligativas.html">Propriedades Coligativas</a>
+            <a href="eletroquimica.html">Eletroquímica</a>
+            <a href="quimica_organica.html">Química Orgânica</a>
+            <a href="quimica_ambiental.html">Química Ambiental</a>
+            <a href="separacao.html">Separação de Misturas</a>
+            <a href="simulado_enem.html">Simulado ENEM</a>
+
+            <button class="logout-menu" onclick="logout()">Sair</button>
+        </nav>
+
+    </header>
+
+
+    <section class="content-card">
+        <div class="imagem-conteudo"><img src="img/solucoes.png" alt="Soluções e Concentração" class="conteudo-img">
+        </div>
+        <h2>Soluções e Concentração</h2>
+        <b>
+            <p>Soluções (misturas homogêneas) e medidas de concentração são temas práticos:
+                diluições, preparo de soluções-padrão e cálculos de reagentes em exames de
+                laboratório aparecem no ENEM.</p>
+        </b><br>
+        <ul>
+            <li>
+                <h3>Molaridade (M):</h3>
+            </li>
+            <p>mol de soluto por litro de solução (mol·L⁻¹). Cuidado: volume da
+                solução (não só do solvente).</p>
+            <li>
+                <h3>g·L⁻¹:</h3>
+            </li>
+            <p>gramas de soluto por litro de solução — útil em preparo prático.</p>
+            <li>
+                <h3>% m/m:</h3>
+            </li>
+            <p>massa de soluto por massa de solução ×100.</p>
+            <li>
+                <h3>% m/v:</h3>
+            </li>
+            <p>massa/volume.</p>
+            <li>
+                <h3>Diluição:</h3>
+            </li>
+            <p>C₁V₁ = C₂V₂ (quando a substância dissolvida permanece a mesma e não
+                há reação).</p>
+            <li>
+                <h3>Exemplos práticos:</h3>
+            </li>
+            <p>transformação entre massa ↔ mol ↔ volume usando massa
+                molar e volumes molares (gás).
+            </p>
+        </ul>
+    </section>
+
+    <section class="questao">
+        <h2>Questão de Fixação</h2>
+        <p> Qual a concentração em g·L⁻¹ de uma solução que contém 20 g de soluto
+            dissolvidos em 500 mL de solução?</p>
+
+        <div class="alternativas">
+            <button onclick="responderQuestao(this, false)"><strong>A)</strong> 10 g·L⁻¹
+            </button>
+            <button onclick="responderQuestao(this, false)"><strong>B)</strong> 20 g·L⁻¹
+            </button>
+            <button onclick="responderQuestao(this, true)"><strong>C)</strong> 40 g·L⁻¹
+            </button>
+            <button onclick="responderQuestao(this, false)"><strong>D)</strong> 400 g·L⁻¹
+            </button>
+            <button onclick="responderQuestao(this, false)"><strong>E)</strong> 0,04 g·L⁻¹
+            </button>
+        </div>
+
+        <p class="quiz-msg"></p>
+
+        <button class="btn-resolucao" onclick="mostrarResolucao(this)"> Ver resolução
+        </button>
+
+        <div class="resolucao" style="display: none;">
+            <p><strong>Resolução:</strong><br>
+                Converter 500 mL para litros: 0,5 L. Concentração g·L⁻¹ = massa (g) /
+                volume (L) = 20 g / 0,5 L = 40 g·L⁻¹. Cheque sempre unidades.
+
+                Por isso, a alternativa correta é a letra <strong>C</strong>.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        function verificar(botao, correta) {
+            const alternativas = document.querySelectorAll(".alt");
+            const msg = document.getElementById("quiz-msg");
+            const botaoResolucao = document.getElementById("btn-resolucao");
+
+            alternativas.forEach(a => {
+                a.disabled = true;
+            });
+
+            let letra = botao.textContent.trim().charAt(0);
+
+            if (letra === correta) {
+                botao.style.backgroundColor = "#2ecc71";
+                msg.textContent = "Resposta correta!";
+                msg.style.color = "#2ecc71";
+            } else {
+                botao.style.backgroundColor = "#e74c3c";
+                msg.textContent = "Resposta errada!";
+                msg.style.color = "#e74c3c";
+            }
+
+            botaoResolucao.style.display = "block";
+        }
+
+        function mostrarResolucao() {
+            document.getElementById("box-resolucao").style.display = "block";
+        }
+    </script>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

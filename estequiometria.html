@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Estequiometria</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+
+<body>
+    <header class="header">
+
+        <h1 class="titulo-com-icone">
+            <img src="img/favicon.png" alt="Ícone">
+            Átomo Digital
+        </h1>
+
+        <!-- Botão do menu -->
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <!-- Menu retrátil -->
+        <nav class="menu" id="menu">
+            <a href="home.html">Início</a>
+            <a href="ligacoes_quimicas.html">Ligações Químicas</a>
+            <a href="funcoes_inorganicas.html">Funções Inorgânicas</a>
+            <a href="estequiometria.html">Estequiometria</a>
+            <a href="termoquimica.html">Termoquímica</a>
+            <a href="solucoes.html">Soluções e Concentração</a>
+            <a href="propriedades_coligativas.html">Propriedades Coligativas</a>
+            <a href="eletroquimica.html">Eletroquímica</a>
+            <a href="quimica_organica.html">Química Orgânica</a>
+            <a href="quimica_ambiental.html">Química Ambiental</a>
+            <a href="separacao.html">Separação de Misturas</a>
+            <a href="simulado_enem.html">Simulado ENEM</a>
+
+            <button class="logout-menu" onclick="logout()">Sair</button>
+        </nav>
+
+    </header>
+
+
+    <section class="content-card">
+        <div class="imagem-conteudo"><img src="img/estequiometria.webp" alt="Estequiometria" class="conteudo-img"></div>
+
+        <h2>Estequiometria</h2>
+        <p><b>É a área que permite quantificar reagentes e produtos numa
+                reação química: quantos mols, gramas ou litros são necessários ou produzidos. É
+                uma habilidade frequentemente exigida em problemas do ENEM que envolvem
+                raciocínio quantitativo.
+
+                cada coeficiente indica proporção molar. Ex.: 2H₂ + O₂ → 2H₂O significa 2 mols de
+                H₂ reagem com 1 mol de O₂ para formar 2 mols de H₂O.</b><br></p>
+
+        <ul>
+            <li>
+                <h3>Mol:</h3>
+            </li>
+            <p>unidade que relaciona partículas (6,02×10²³).</p>
+            <li>
+                <h3> Massa molar:</h3>
+            </li>
+            <p>soma das massas atômicas (g/mol). Para converter massa ↔ mol: n
+                = m / M.</p>
+            <li>
+                <h3> Volume de gases:</h3>
+            </li>
+            <p>em CNTP 1 mol de gás ≈ 22,4 L (atenção: ENEM costuma usar
+                condições- padrão; ver enunciado).</p>
+            <li>
+                <h3> Reagente limitante:</h3>
+            </li>
+            <p>o reagente que acaba primeiro limita a quantidade de
+                produto; determina rendimento teórico.</p>
+            <li>
+                <h3> Rendimento:</h3>
+            </li>
+            <p>rendimento real / rendimento teórico × 100%.</p>
+        </ul>
+    </section>
+
+    <section class="questao">
+        <h2>Questão de Fixação</h2>
+        <p> Equação: 2H₂ + O₂ → 2H₂O. Se eu tenho 4 mol de H₂ e 1 mol de O₂, qual é o
+            reagente limitante e quantos mols de H₂O podem ser formados teoricamente?:</p>
+
+        <div class="alternativas">
+            <button onclick="responderQuestao(this, false)"><strong>A)</strong> Limitante H₂; 4 mol H₂O </button>
+            <button onclick="responderQuestao(this, false)"><strong>B)</strong> Limitante O₂; 4 mol H₂O </button>
+            <button onclick="responderQuestao(this, false)"><strong>C)</strong> Limitante H₂; 2 mol H₂O </button>
+            <button onclick="responderQuestao(this, true)"><strong>D)</strong> Limitante O₂; 2 mol H₂O </button>
+            <button onclick="responderQuestao(this, false)"><strong>E)</strong> Não há limitante; 6 mol H₂O </button>
+        </div>
+
+        <p class="quiz-msg"></p>
+
+        <button class="btn-resolucao" onclick="mostrarResolucao(this)"> Ver resolução
+        </button>
+
+        <div class="resolucao" style="display: none;">
+            <p><strong>Resolução:</strong><br>
+                A equação diz que 2 mol H₂ reagem com 1 mol O₂ para
+                produzir 2 mol H₂O. Com 4 mol H₂, a proporção exigiria 2 mol O₂ (porque 4 mol H₂
+                × (1 mol O₂ / 2 mol H₂) = 2 mol O₂). Mas só há 1 mol O₂ disponível, portanto O₂ é o
+                limitante. Quantidade de H₂O obtida: cada mol de O₂ gera 2 mol H₂O (pela
+                equação: 1 mol O₂ → 2 mol H₂O). Com 1 mol O₂, teremos 2 mol H₂O.
+                Por isso, a alternativa correta é a letra <strong>D</strong>.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        function verificar(botao, correta) {
+            const alternativas = document.querySelectorAll(".alt");
+            const msg = document.getElementById("quiz-msg");
+            const botaoResolucao = document.getElementById("btn-resolucao");
+
+            alternativas.forEach(a => {
+                a.disabled = true;
+            });
+
+            let letra = botao.textContent.trim().charAt(0);
+
+            if (letra === correta) {
+                botao.style.backgroundColor = "#2ecc71";
+                msg.textContent = "Resposta correta!";
+                msg.style.color = "#2ecc71";
+            } else {
+                botao.style.backgroundColor = "#e74c3c";
+                msg.textContent = "Resposta errada!";
+                msg.style.color = "#e74c3c";
+            }
+
+            botaoResolucao.style.display = "block";
+        }
+
+        function mostrarResolucao() {
+            document.getElementById("box-resolucao").style.display = "block";
+        }
+    </script>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

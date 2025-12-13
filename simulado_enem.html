@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simulado ENEM - Átomo Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+
+<body>
+
+    <header class="header">
+
+  <h1 class="titulo-com-icone">
+    <img src="img/favicon.png" alt="Ícone">
+    Átomo Digital
+  </h1>
+
+  <!-- Botão do menu -->
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  <!-- Menu retrátil -->
+  <nav class="menu" id="menu">
+    <a href="home.html">Início</a>
+    <a href="ligacoes_quimicas.html">Ligações Químicas</a>
+    <a href="funcoes_inorganicas.html">Funções Inorgânicas</a>
+    <a href="estequiometria.html">Estequiometria</a>
+    <a href="termoquimica.html">Termoquímica</a>
+    <a href="solucoes.html">Soluções e Concentração</a>
+    <a href="propriedades_coligativas.html">Propriedades Coligativas</a>
+    <a href="eletroquimica.html">Eletroquímica</a>
+    <a href="quimica_organica.html">Química Orgânica</a>
+    <a href="quimica_ambiental.html">Química Ambiental</a>
+    <a href="separacao.html">Separação de Misturas</a>
+    <a href="simulado_enem.html">Simulado ENEM</a>
+
+    <button class="logout-menu" onclick="logout()">Sair</button>
+  </nav>
+
+</header>
+
+
+    <main class="content">
+
+        <h2>Simulado ENEM de Química</h2>
+        <h3 class="ENEM">Responda às questões abaixo. Boa sorte!</h3>
+
+        <!-- ================= QUESTÃO ================= -->
+        <section class="questao">
+            <h3>1) ENEM 2022</h3>
+
+            <p>
+                Um grupo de alunos realizou um experimento para observar algumas
+                propriedades dos ácidos, adicionando um pedaço de mármore (CaCO3) a uma
+                solução aquosa de ácido clorídrico (HCl), observando a liberação de um gás e o
+                aumento da temperatura.
+            </p>
+
+            <img src="img/q112.jpeg" class="conteudo-img">
+
+            <p>O gás obtido no experimento é o:</p>
+
+            <div class="alternativas">
+                <button onclick="responderQuestao(this, false)">A) H₂</button>
+                <button onclick="responderQuestao(this, false)">B) O₂</button>
+                <button onclick="responderQuestao(this, true)">C) CO₂</button>
+                <button onclick="responderQuestao(this, false)">D) CO</button>
+                <button onclick="responderQuestao(this, false)">E) Cl₂</button>
+            </div>
+
+            <p class="quiz-msg"></p>
+
+            <button class="btn-resolucao" onclick="mostrarResolucao(this)">
+                Ver resolução
+            </button>
+
+            <div class="resolucao">
+                <p><b>Reação química e balanceamento</b><br></p>
+                <p> CaCO2(s)+2HCl(aq)⟶CaCl2(aq)+CO2</p>
+                <p> Mármore é principalmente carbonato de cálcio, CaCO₃ (sólido).</p>
+                <p> Ácido clorídrico fornece H⁺ que reage com o íon carbonato formando ácido
+                    carbônico , que se decompõe em gás, e o gás observado é <b>dióxido de carbono, CO₂.</b><br> A
+                    evolução de gás e a reação
+                    exotérmica justificam o aumento de temperatura.</p>
+                <p>Por isso, a alternativa correta é a letra <strong>C</strong>.</p>
+
+            </div>
+        </section>
+
+        <!-- Questão 2 -->
+        <section class="questao">
+            <h3>ENEM 2022</h3>
+            <p>
+                O urânio é empregado como fonte de energia em reatores nucleares. Para tanto,
+                o seu mineral deve ser refinado, convertido a hexafluoreto de urânio e
+                posteriormente enriquecido, para aumentar de 0,7% a 3% a abundância de um
+                isótopo específico o urânio-235. Uma das formas de enriquecimento utiliza a
+                pequena diferença de massa entre os hexafluoretos de urânio-235 e de urânio238 para separá-los por
+                efusão, precedida pela vaporização. Esses vapores
+                devem efundir repetidamente milhares de vezes através de barreiras porosas
+                formadas por telas com grande número de pequenos orifícios. No entanto,
+                devido à complexidade e à grande quantidade de energia envolvida, cientistas e
+                engenheiros continuam a pesquisar procedimentos alternativos de
+                enriquecimento.
+            </p>
+            <p> ATKINS, P.; JONES, L. Princípios de química: questionando a vida moderna e o
+                meio ambiente. Porto Alegre: Bookman, 2006 (adaptado).</p>
+
+            <p> Considerando a diferença de massa mencionada entre os dois isótopos, que tipo
+                de procedimento alternativo ao da efusão pode ser empregado para tal
+                finalidade?</p>
+
+            <div class="alternativas">
+                <button onclick="responderQuestao(this, false)">A) Peneiração </button>
+                <button onclick="responderQuestao(this, true)">B) Centrifugação </button>
+                <button onclick="responderQuestao(this, false)">C) Extração por solvente </button>
+                <button onclick="responderQuestao(this, false)">D) Destilação fracionada </button>
+                <button onclick="responderQuestao(this, false)">E) Separação magnética</button>
+            </div>
+
+            <p class="quiz-msg"></p>
+
+            <button class="btn-resolucao" onclick="mostrarResolucao(this)">
+                Ver resolução
+            </button>
+
+            <div class="resolucao">
+                <p> Quando há pequenas diferenças de massa entre espécies, métodos que
+                    amplificam a diferença por força centrífuga são eficazes. A separação por
+                    centrifugação de gás (centrífuga gasosa) explora a diferença de massa/raio de
+                    difusão sob alta velocidade.
+                </p>
+                <p><b> Por que as outras opções não se aplicam:</b><br></p>
+                <ul>
+                    <li>
+                        <h4>Peneiração: </h4>
+                    </li>
+                    <p>separa por tamanho físico (sólidos), não por massa atômica de
+                        moléculas gasosas.</p>
+                    <li>
+                        <h4>Extração por solvente:</h4>
+                    </li>
+                    <p>separa por afinidade química/solubilidade, não por
+                        massa muito próxima.</p>
+                    <li>
+                        <h4>Destilação fracionada: </h4>
+                    </li>
+                    <p>separa por diferenças de ponto de ebulição — UF₆ é
+                        todo o mesmo composto químico com isotopólogos que têm pontos muito
+                        próximos; não é prático.</p>
+                    <li>
+                        <h4>Separação magnética:</h4>
+                    </li>
+                    <p>isótopos de urânio não são separados magneticamente
+                        de forma útil (não há momento magnético ligado à massa).</p>
+                </ul>
+                <p>Por isso, a alternativa correta é a letra <strong>B</strong>.</p>
+
+            </div>
+        </section>
+
+        <!-- Questão 3 -->
+        <section class="questao">
+            <h3>ENEM 2023</h3>
+            <p>
+                Um garoto comprou vários abacates na feira, mas descobriu que eles não
+                estavam maduros o suficiente para serem consumidos. Sua mãe recomendou
+                que ele colocasse os abacates em um recipiente fechado, pois isso aceleraria
+                seu amadurecimento. Com certa dúvida, o garoto realizou esta experiência:
+                colocou alguns abacates no recipiente e deixou os demais em uma fruteira
+                aberta. Surpreendendo-se, ele percebeu que os frutos que estavam no recipiente
+                fechado amadureceram mais rapidamente.
+            </p>
+            <p>A aceleração desse processo é causada por</p>
+
+            <div class="alternativas">
+                <button onclick="responderQuestao(this, true)">A) Acúmulo de gás etileno </button>
+                <button onclick="responderQuestao(this, false)">B) Redução da umidade do ar</button>
+                <button onclick="responderQuestao(this, false)">C) Aumento da concentração de CO2</button>
+                <button onclick="responderQuestao(this, false)">D) Diminuição da intensidade luminosa.</button>
+                <button onclick="responderQuestao(this, false)">E) Isolamento do contato com O₂ atmosférico</button>
+            </div>
+
+            <p class="quiz-msg"></p>
+
+            <button class="btn-resolucao" onclick="mostrarResolucao(this)">
+                Ver resolução
+            </button>
+
+            <div class="resolucao">
+                <p><b>Observação experimental:</b><br>Abacates no recipiente fechado amadurecem mais rápido.</p>
+                <p><b>Fisiologia dos frutos:</b><br>Abacate é fruto climatérico — durante o amadurecimento ele produz e
+                    responde ao gás etileno (C₂H₄), um hormônio gasoso vegetal que acelera processos de maturação.</p>
+                <p>Em recipiente fechado, o etileno liberado fica retido e se acumula, aumentando a taxa de
+                    amadurecimento.</p>
+                <p>Por isso, a alternativa correta é a letra <strong>A</strong>.</p>
+
+            </div>
+        </section>
+
+        <!-- Questão 4 -->
+        <section class="questao">
+            <h3>ENEM 2023</h3>
+            <p>
+                O consumo exagerado de refrigerantes é preocupante, pois contribui para o
+                aumento de casos de obesidade e diabetes. Considere dois refrigerantes
+                enlatados, um comum e um diet, e que ambos possuam a mesma quantidade de
+                aditivos, exceto pela presença de açúcar. O refrigerante comum contém
+                basicamente água carbonatada e grande quantidade de açúcar; já o refrigerante
+                diet tem água carbonatada e adoçantes, cujas massas são muito pequenas.
+            </p>
+            <p>CAVAGIS, A. D. M.; PEREIRA, E. A.; OLIVEIRA, L. C. Um método simples para
+                avaliar o teor de sacarose e CO₂ em refrigerantes. Química Nova na Escola, n.
+                3, ago. 2014 (adaptado).</p>
+            <p>Entre as duas versões apresentadas, o refrigerante comum possui:</p>
+
+            <div class="alternativas">
+                <button onclick="responderQuestao(this, true)">A) A maior densidade</button>
+                <button onclick="responderQuestao(this, false)">B) Menor viscosidade </button>
+                <button onclick="responderQuestao(this, false)">C) Maior volume de gás dissolvido</button>
+                <button onclick="responderQuestao(this, false)">D) Menor massa de solutos dissolvidos.</button>
+                <button onclick="responderQuestao(this, false)">E) Maior temperatura de congelamento.</button>
+            </div>
+
+            <p class="quiz-msg"></p>
+
+            <button class="btn-resolucao" onclick="mostrarResolucao(this)">
+                Ver resolução
+            </button>
+
+            <div class="resolucao">
+                <p><b>Densidade</b><br>𝜌 é massa/volume. Quando se dissolve uma quantidade significativa
+                    de soluto (açúcar) em um dado volume de água, a massa total aumenta mais do
+                    que o volume (o volume aumenta, mas menos proporcionalmente que a massa),
+                    portanto a densidade aumenta.</p>
+                <p>O refrigerante comum tem <b>muito mais massa de solutos</b><br> por litro que o diet,
+                    logo massa por volume maior → <b> maior densidade.
+                    </b><br></p>
+                <p>Viscosidade tende a aumentar com solutos, então menor viscosidade está incorreto.</p>
+                <p>O volume de gás dissolvido depende da pressão parcial de CO₂ e da
+                    temperatura, não do açúcar em si; açúcar não necessariamente aumenta o
+                    volume de gás dissolvido.</p>
+                <p>O ponto de congelamento se reduz com solutos (efeito crioscópico), portanto
+                    “maior temperatura de congelamento” está errado.</p>
+                <p>Por isso, a alternativa correta é a letra <strong>A</strong>.</p>
+
+            </div>
+        </section>
+
+        <!-- Questão 5 -->
+        <section class="questao">
+            <h3>ENEM 2023</h3>
+            <p>
+                Em uma indústria, o controle da dureza da água é importante quando ela é
+                utilizada em caldeiras, uma vez que sais pouco solúveis, formados a partir de
+                sulfatos e carbonatos, podem acumular-se no interior das tubulações, causando
+                obstruções. Para avaliar a água utilizada nessa indústria, foram realizados testes
+                de qualidade que consideraram os seguintes parâmetros:
+            </p>
+            <img src="img/q126.jpeg" alt="questões" class="conteudo-img">
+
+            <div class="alternativas">
+                <button onclick="responderQuestao(this, true)">A) 1</button>
+                <button onclick="responderQuestao(this, false)">B) 2</button>
+                <button onclick="responderQuestao(this, false)">C) 3</button>
+                <button onclick="responderQuestao(this, false)">D) 4</button>
+                <button onclick="responderQuestao(this, false)">E) 5</button>
+            </div>
+
+            <p class="quiz-msg"></p>
+
+            <button class="btn-resolucao" onclick="mostrarResolucao(this)">
+                Ver resolução
+            </button>
+
+            <div class="resolucao">
+                <p>A formação de sais pouco solúveis, como carbonatos e sulfatos, pode ocorrer e
+                    se acumular nas tubulações, ocasionando sua obstrução. O parâmetro
+                    relacionado a essa formação de sais é a concentração de cálcio, já que ele dá
+                    origem ao carbonato de cálcio e ao sulfato de cálcio, ambos de baixa
+                    solubilidade.</p>
+                <p>Por isso, a alternativa correta é a letra <strong>A</strong>.</p>
+
+            </div>
+        </section>
+
+        <!-- Questão 6 -->
+        <section class="questao">
+            <h3>ENEM 2023</h3>
+            <p>
+                Entre os medicamentos mais comuns consumidos para o alívio da dor está o
+                ibuprofeno, um composto quiral com ação anti-inflamatória e efeito analgésico,
+                que é comercializado como fármaco opticamente puro, ou seja, sem a mistura
+                com outro isômero óptico. A fórmula estrutural plana do ibuprofeno é:
+            </p>
+            <img src="img/q134.1.jpeg" alt="questões" class="conteudo-img">
+            <p>Além do ibuprofeno, destacam-se também os principios ativos a seguir,
+                presentes em outros medicamentos para o alívio da dor:</p>
+            <img src="img/q134.2.jpeg" alt="questões" class="conteudo-img">
+            <p>O principio ativo que apresenta o mesmo tipo de isomeria espacial que o ibuprofeno é o(a)</p>
+
+            <div class="alternativas">
+                <button onclick="responderQuestao(this, false)">A) Fenacetina</button>
+                <button onclick="responderQuestao(this, false)">B) Paracetamol </button>
+                <button onclick="responderQuestao(this, false)">C) Dipirona sódica</button>
+                <button onclick="responderQuestao(this, false)">D) Diclofenaco sódico</button>
+                <button onclick="responderQuestao(this, true)">E) Butilbrometo de escopolamina.</button>
+            </div>
+
+            <p class="quiz-msg"></p>
+
+            <button class="btn-resolucao" onclick="mostrarResolucao(this)">
+                Ver resolução
+            </button>
+
+            <div class="resolucao">
+                <p>O ibuprofeno é uma molécula quiral e, por esse motivo, apresenta isomeria
+                    óptica, consequência da presença de um carbono assimétrico. Da mesma forma,
+                    o butilbrometo de escopolamina também possui carbono assimétrico e exibe
+                    isomeria óptica.</p>
+                <p>Por isso, a alternativa correta é a letra <strong>E</strong>.</p>
+
+            </div>
+        </section>
+
+        <!-- Questão 7 -->
+        <section class="questao">
+            <h3>ENEM 2024</h3>
+            <p>
+                O magnésio metálico utilizado em ligas leves é produzido em um processo que
+                envolve várias etapas e utiliza água do mar como matéria-prima. A primeira etapa
+                desse processo consiste na reação entre o ion Mg2+ e hidróxido de cálcio,
+                Ca(OH)2, obtendo uma mistura que contém hidróxido de magnésio, pouco
+                solúvel, e íons Ca2+, de acordo com a equação química:
+            </p>
+            <p>Mg2+ (aq) + Ca(OH)2 (aq) → Mg(OH)2 (s) + Ca2+ (aq)</p>
+            <p>O método adequado para separar o Mg(OH)2 dessa mistura é a:</p>
+
+            <div class="alternativas">
+                <button onclick="responderQuestao(this, true)">A) Filtração </button>
+                <button onclick="responderQuestao(this, false)">B) Catação </button>
+                <button onclick="responderQuestao(this, false)">C) Destilação</button>
+                <button onclick="responderQuestao(this, false)">D) Dissolução </button>
+                <button onclick="responderQuestao(this, false)">E) Evaporação</button>
+            </div>
+
+            <p class="quiz-msg"></p>
+
+            <button class="btn-resolucao" onclick="mostrarResolucao(this)">
+                Ver resolução
+            </button>
+
+            <div class="resolucao">
+                <p><b>Equação fornecida</b><br></p>
+                <p>Mg2+(aq)+Ca(OH)2(aq)⟶Mg(OH)2(s)+Ca2+(aq)</p>
+                <p><b>O que se formou:</b><br>Mg(OH)₂ em sólido pouco solúvel (precipitado) misturado com uma solução
+                    que contém Ca²⁺.</p>
+                <p><b>Método de separação adequado:</b><br>quando se tem um sólido sólido/coloidal disperso em um
+                    líquido, o método adequado é filtração — separar sólido por retenção em filtro, coletando o sólido
+                    no filtro e o líquido passando.</p>
+                <p>Por isso, a alternativa correta é a letra <strong>A</strong>.</p>
+
+            </div>
+        </section>
+
+        <!-- Questão 8 -->
+        <section class="questao">
+            <h3>ENEM 2024</h3>
+            <p>A hidroxiapatita, Ca5 (PO4)3OH, é um mineral constituinte do esmalte dos
+                dentes. Entre as diversas reações que ocorrem no meio bucal, encontram-se em
+                equilíbrio as reações de desmineralização e mineralização da hidroxiapatita em
+                meio aquoso, ilustradas a seguir. A desmineralização está associada à
+                fragilização do esmalte do dente e à formação de cáries.</p>
+            <img src="img/q94.1.jpeg" alt="questões" class="conteudo-img">
+            <p>O uso de creme dental pode minimizar a perda da hidroxiapatita. O quadro apresenta o agente de polimento
+                e o pH de alguns cremes dentais comerciais.</p>
+            <img src="img/q94.2.jpeg" alt="questões" class="conteudo-img">
+            <p>STORGATTO, G. A.; BRAIBANTE, M. E.”F.; BRAIBANTE, H. T. S. A química na odontologia. Química Nova na
+                Escola, v.’39, fev. 2017 (adaptado).</p>
+
+            <p>Considerando o equilíbrio químico envolvido, qual creme dental promove a maior
+                desmineralização do esmalte do dente?</p>
+
+            <div class="alternativas">
+                <button onclick="responderQuestao(this, false)">A) I</button>
+                <button onclick="responderQuestao(this, false)">B) II</button>
+                <button onclick="responderQuestao(this, false)">C) III</button>
+                <button onclick="responderQuestao(this, true)">D) IV</button>
+                <button onclick="responderQuestao(this, false)">E) V</button>
+            </div>
+
+            <p class="quiz-msg"></p>
+
+            <button class="btn-resolucao" onclick="mostrarResolucao(this)">
+                Ver resolução
+            </button>
+
+            <div class="resolucao">
+                <p>Um pH mais ácido, como o valor 6,9, intensifica a desmineralização do esmalte dentário porque aumenta
+                    a concentração de íons H⁺ no ambiente. Esse acréscimo de H⁺ desloca o equilíbrio químico da
+                    hidroxiapatita, favorecendo sua dissolução.</p>
+                <P>Entre os cremes analisados, o creme IV é o que provoca maior
+                    desmineralização, pois apresenta o pH mais baixo. O ambiente mais ácido gera
+                    maior quantidade de íons H⁺, promovendo a dissolução da hidroxiapatita e
+                    enfraquecendo o esmalte dos dentes.</P>
+                <p>Por isso, a alternativa correta é a letra <strong>D</strong>.</p>
+
+            </div>
+        </section>
+
+        <!-- Questão 9 -->
+        <section class="questao">
+            <h3>ENEM 2024</h3>
+            <p>Os pesticidas naturais vêm sendo utilizados no controle de pragas e doenças
+                agrícolas como substituintes de pesticidas sintéticos tradicionais, por serem
+                menos nocivos ao ambiente, biodegradáveis e minimizarem custos e riscos
+                relativos à lavoura. Por exemplo, os compostos 1 e 2 estão envolvidos nas
+                respostas de defesa das plantas. Os grupos funcionais presentes nesses
+                compostos são importantes para suas propriedades no controle de pragas.
+            </p>
+            <img src="img/q96.png" alt="questões" class="conteudo-img">
+            <p>PINTO-ZEVALLOS, D. M.; ZARBIN, P. H. G. A química na
+                agricultura: perspectivas para o desenvolvimento de tecnologias sustentáveis.
+                Química Nova, n. 10, 2013 (adaptado).
+            </p>
+            <p>Qual é a função orgânica correspondente ao grupo funcional comum presente
+                nesses dois compostos?</p>
+
+            <div class="alternativas">
+                <button onclick="responderQuestao(this, true)">A) Ácido carboxílico.</button>
+                <button onclick="responderQuestao(this, false)">B) Cetona.</button>
+                <button onclick="responderQuestao(this, false)">C) Alceno.</button>
+                <button onclick="responderQuestao(this, false)">D) Álcool.</button>
+                <button onclick="responderQuestao(this, false)">E) Fenol.</button>
+            </div>
+
+            <p class="quiz-msg"></p>
+
+            <button class="btn-resolucao" onclick="mostrarResolucao(this)">
+                Ver resolução
+            </button>
+
+            <div class="resolucao">
+                <p><b>Composto 1:</b><br>Apresenta um grupo –COOH ligado diretamente a um anel
+                    benzênico, caracterizando um derivado do ácido benzóico com a presença
+                    adicional de um grupo hidroxila. Assim, sua função orgânica principal é a de
+                    ácido carboxílico.</p>
+                <p><b>Composto 2:</b><br>Também contém o grupo –COOH, além de outras funções
+                    orgânicas, como uma cetona (C=O) e uma cadeia carbônica com ligação dupla</p>
+                <p>Apesar das diferenças estruturais, o grupo funcional comum aos dois compostos
+                    é o ácido carboxílico, correspondente à carboxila (–COOH).</p>
+                <p>Por isso, a alternativa correta é a letra <strong>A</strong>.</p>
+
+            </div>
+        </section>
+
+        <!-- Questão 10 -->
+        <section class="questao">
+            <h3>ENEM 2024</h3>
+            <p>
+                O biogás é uma alternativa energética muito importante, pois, além de reduzir a
+                dependência por combustíveis fósseis, sua obtenção pode ser realizada a partir
+                de resíduos da produção agroindustrial. Considere que o biogás produzido em
+                um empreendimento de suinocultura contém 70% em volume de metano (massa
+                molar 16 g/mol; volume molar 22 L/mol). Ele será utilizado para geração de
+                energia em substituição ao etanol (massa molar 46 g/mol) em um gerador no
+                qual 1 m³ de biogás de origem suína substitui 0,59 L de etanol anidro (densidade
+                0,78 g/mL).
+
+            </p>
+            <p>Nessas condições, a massa de metano necessária para substituir 10 mol de
+                etanol na produção de energia é mais próxima de:</p>
+
+            <div class="alternativas">
+                <button onclick="responderQuestao(this, false)">A) 300g</button>
+                <button onclick="responderQuestao(this, false)">B) 400g</button>
+                <button onclick="responderQuestao(this, true)">C) 510g</button>
+                <button onclick="responderQuestao(this, false)">D) 590g</button>
+                <button onclick="responderQuestao(this, false)">E) 720g</button>
+            </div>
+
+            <p class="quiz-msg"></p>
+
+            <button class="btn-resolucao" onclick="mostrarResolucao(this)">
+                Ver resolução
+            </button>
+
+            <div class="resolucao">
+                <p>O <b>etanol </b><br>tem <b>massa molar </b><br>de 46 g/mol.</p>
+                <p>10 mol × 46 g/mol= 460g</p>
+                <p><b> Densidade </b><br> do etanol: 0,78 g/mL. </p>
+                <p>V= 460/0,78 ≈ 590 mL = 0,590mL</p>
+                <p> Como o <b> biogás tem 70% de CH₄:</b><br></p>
+                <p>1 m3 × 0,70 = 0,70 m3 = 700 L</p>
+                <p>Usando 22 L/mol para gases:</p>
+                <p>n=22 / 700 ≈ 31,8 mol</p>
+                <p><b> Massa molar do CH₄ </b><br>= 16 g/mol. </p>
+                <p>31,8 × 16= 508,8 g ≈ 510 g</p>
+                <p><b> ≈ 0,590 L de etanol </b><br>equivalem a <b>≈ 510 g de CH₄ </b><br>no biogás.</p>
+
+                <p>Por isso, a alternativa correta é a letra <strong>C</strong>.</p>
+
+            </div>
+        </section>
+
+        <!-- Questão 11 -->
+        <section class="questao">
+            <h3>ENEM 2025</h3>
+            <p>
+                Existe um processo de purificação de água em que são removidos os sais
+                dissolvidos. A água que passa por esse processo é muito utilizada em
+                laboratórios de química, em indústrias (como solvente), em baterias de carros
+                etc. Entretanto, esse tipo de água não é adequado para ingestão, pois pode
+                causar problemas de saúde, como carência iônica e diarreia.
+            </p>
+
+            <p>Essa água é chamada de:</p>
+
+            <div class="alternativas">
+                <button onclick="responderQuestao(this, false)">A) Dura</button>
+                <button onclick="responderQuestao(this, false)">B) Pesada</button>
+                <button onclick="responderQuestao(this, false)">C) Sanitária</button>
+                <button onclick="responderQuestao(this, true)">D) Destilada</button>
+                <button onclick="responderQuestao(this, false)">E) Oxigenada</button>
+            </div>
+
+            <p class="quiz-msg"></p>
+
+            <button class="btn-resolucao" onclick="mostrarResolucao(this)">
+                Ver resolução
+            </button>
+            <div class="resolucao">
+                <p>Trata-se de água destilada, uma vez que o método de purificação mencionado
+                    no enunciado é a destilação.</p>
+                <p>A destilação simples permite separar misturas homogêneas constituídas por um
+                    sólido dissolvido em um líquido, como ocorre na retirada dos sais presentes na
+                    água descrita no texto.</p>
+
+
+                <p>Por isso, a alternativa correta é a letra <strong>D</strong>.</p>
+
+            </div>
+        </section>
+
+        <!-- Questão 12 -->
+        <section class="questao">
+            <h3>ENEM 2025</h3>
+            <p>
+                As usinas termonucleares são aquelas que produzem energia elétrica a partir da
+                geração de energia térmica proveniente das reações nucleares. Normalmente,
+                essas usinas funcionam por meio de dois circuitos, denominados circuito
+                primário (vaso de pressão, pressurizador e bomba) e circuito secundário
+                (gerador de vapor, turbina, condensador, tanque de alimentação e bombas),
+                além de um sistema de água de refrigeração, formado por uma bomba ligada a
+                uma fonte hídrica natural.
+            </p>
+            <img src="img/q107.png" alt="questões" class="conteudo-img">
+            <p>Durante a operação da usina, se o sistema de água de refrigeração funcionar de
+                forma ineficiente pode causar poluição térmica, comprometendo a vida no
+                ecossistema aquático.</p>
+            <p>Disponível em: www.eletronuclear.gov.br.
+                Acesso em: 29 nov. 2021 (adaptado).</p>
+            <p>Para o ecossistema aquático, a ineficiência do sistema de água de refrigeração
+                tem como consequência a:</p>
+
+            <div class="alternativas">
+                <button onclick="responderQuestao(this, false)">A) Diminuição do pH</button>
+                <button onclick="responderQuestao(this, false)">B) Liberação de gases poluentes</button>
+                <button onclick="responderQuestao(this, false)">C) Contaminação por combustíveis</button>
+                <button onclick="responderQuestao(this, false)">D) Liberação de elementos radioativos</button>
+                <button onclick="responderQuestao(this, true)">E) Diminuição da solubilidade do gás oxigênio</button>
+            </div>
+
+            <p class="quiz-msg"></p>
+
+            <button class="btn-resolucao" onclick="mostrarResolucao(this)">
+                Ver resolução
+            </button>
+
+            <div class="resolucao">
+                <p>A baixa eficiência do sistema de refrigeração resulta no aumento da temperatura
+                    do ecossistema aquático.</p>
+                <p>Esse aquecimento reduz a solubilidade dos gases na água e,
+                    consequentemente, diminui a quantidade de oxigênio dissolvido. Essa redução
+                    pode comprometer a sobrevivência de diversos organismos aquáticos, levando-os à morte.</p>
+                <p>Por isso, a alternativa correta é a letra <strong>E</strong>.</p>
+
+            </div>
+        </section>
+
+        <!-- Questão 13 -->
+        <section class="questao">
+            <h3>ENEM 2025</h3>
+            <p>
+                A química nuclear é uma importante ferramenta na produção de substâncias
+                utilizadas na área da saúde humana. A radiação emitida pelo cobalto-60 é
+                utilizada na medicina como ferramenta de diagnóstico e no tratamento do câncer.
+                No entanto, esse radioisótopo tem um tempo de armazenamento limitado, pois
+                seu tempo de meia-vida é de 5,3 anos. Considere um frasco com uma amostra
+                contendo 2,00 mg de cobalto-60, armazenado durante um período de 26,5 anos
+            </p>
+            <p>A massa de cobalto-60, em miligrama, que restará ao final desse tempo é mais
+                próxima de:</p>
+
+            <div class="alternativas">
+                <button onclick="responderQuestao(this, false)">A) 2,00 mg</button>
+                <button onclick="responderQuestao(this, false)">B) 1,00 mg</button>
+                <button onclick="responderQuestao(this, false)">C) 0,40 mg</button>
+                <button onclick="responderQuestao(this, false)">D) 0,13 mg</button>
+                <button onclick="responderQuestao(this, true)">E) 0,06 mg</button>
+            </div>
+
+            <p class="quiz-msg"></p>
+
+            <button class="btn-resolucao" onclick="mostrarResolucao(this)">
+                Ver resolução
+            </button>
+
+            <div class="resolucao">
+                <p>O tempo de meia-vida corresponde ao intervalo necessário para que metade
+                    da quantidade inicial de uma substância radioativa se desintegre.</p>
+                <p>No exercício, o tempo de meia-vida é de <b>5,3 anos.</b><br></p>
+                <p>Para descobrir quantos períodos de meia-vida transcorreram, divide-se o
+                    tempo total pelo tempo de meia-vida:</p>
+                <p>Assim, temos <b>n = 5 </b><br>períodos de meia-vida. </p>
+                <ul>
+                    <li>
+                        <p>: massa inicial</p>
+                    </li>
+                    <li>
+                        <p>: massa final</p>
+                    </li>
+                    <li>
+                        <p>: número de meias-vidas transcorridas</p>
+                    </li>
+                </ul>
+                <p>Mf = M0= 2 mg / 25 = 2 mg / 32</p>
+                <p>Mf = 0,0625 mg</p>
+                <p>Por isso, a alternativa correta é a letra <strong>E</strong>.</p>
+
+            </div>
+        </section>
+
+        <!-- Questão 14 -->
+        <section class="questao">
+            <h3>ENEM 2025</h3>
+            <p>
+                Objetos de prata escurecem em contato com compostos contendo enxofre por
+                causa da formação de uma fina camada de sulfeto de prata. Um método simples
+                para clarear o objeto consiste em forrar um recipiente com papel alumínio,
+                adicionar ao recipiente uma solução aquosa de cloreto de sódio e, enfim,
+                mergulhar o objeto de prata enegrecido. Em cerca de três minutos, a prata volta
+                à coloração original. As seguintes semirreações e os respectivos potenciaispadrão de redução são úteis
+                para a compreensão dos fenômenos ocorridos.
+            </p>
+            <p>Ag₂S (s) + 2 e 2 Ag (s) + S² (aq). -0,69 V</p>
+            <p>O2 (g) +4 H+ (aq) + 4 e 2 H₂O (I). +1,23 V</p>
+            <p>Al3+ (aq) + 3 e → Al (s). -1,68 V</p>
+            <p>SARTORI, E. R.; BATISTA, E. F.; FATIBELLO-FILHO, O. Escurecimento e
+                limpeza de objetos de prata: um experimento simples e de fácil execução
+                envolvendo reações de oxidação-redução. Química Nova na Escola, n.
+                30,’2008 (adaptado).</p>
+            <p>Os valores das diferenças de potencial-padrão das reações que representam o
+                escurecimento e o clareamento do objeto de prata são, respectivamente:</p>
+
+            <div class="alternativas">
+                <button onclick="responderQuestao(this, false)">A) +0,54 V e +2,37 V.</button>
+                <button onclick="responderQuestao(this, true)">B) +1,92 V e +0,99 V</button>
+                <button onclick="responderQuestao(this, false)">C) -0,15 V e +5,43 V.</button>
+                <button onclick="responderQuestao(this, false)">D) +2,61 V e +1,29 V</button>
+                <button onclick="responderQuestao(this, false)">E) +0,15 V e -1,29 V.</button>
+            </div>
+
+            <p class="quiz-msg"></p>
+
+            <button class="btn-resolucao" onclick="mostrarResolucao(this)">
+                Ver resolução
+            </button>
+
+            <div class="resolucao">
+                <p>Reações de escurecimento devido à oxidação da prata:</p>
+                <p>4 Ag(s) + 2S-2 (aq)—› 2Ag2S(s)+ 4e–.        – 0, 69 V</p>
+                <p>O2(s) + 4H+ (aq) + 4 e– —› 2H2O (l).        + 1, 23 V</p>
+                <p>                                ddp = + 1,92 V</p>
+
+                <p>Reações de clareamento devido à redução da prata:</p>
+                <p>3 Ag2S(s) + 6 e– —› 6 Ag(s)+ 3 S 2- (aq).   – 0, 69 V</p>
+                <p>2 Al(s) + 2 Al(aq)3+ —› 6 e–.               + 1, 23 V</p>
+                <p>                                ddp = + 1,92 V</p>
+
+                <p>Por isso, a alternativa correta é a letra <strong>B</strong>.</p>
+
+            </div>
+        </section>
+
+    </main>
+
+   <script src="script.js"></script>
+
+</body>
+
+</html>

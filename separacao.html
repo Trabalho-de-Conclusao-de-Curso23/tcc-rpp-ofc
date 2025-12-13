@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Separação de Misturas</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+
+<body>
+    <header class="header">
+
+        <h1 class="titulo-com-icone">
+            <img src="img/favicon.png" alt="Ícone">
+            Átomo Digital
+        </h1>
+
+        <!-- Botão do menu -->
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <!-- Menu retrátil -->
+        <nav class="menu" id="menu">
+            <a href="home.html">Início</a>
+            <a href="ligacoes_quimicas.html">Ligações Químicas</a>
+            <a href="funcoes_inorganicas.html">Funções Inorgânicas</a>
+            <a href="estequiometria.html">Estequiometria</a>
+            <a href="termoquimica.html">Termoquímica</a>
+            <a href="solucoes.html">Soluções e Concentração</a>
+            <a href="propriedades_coligativas.html">Propriedades Coligativas</a>
+            <a href="eletroquimica.html">Eletroquímica</a>
+            <a href="quimica_organica.html">Química Orgânica</a>
+            <a href="quimica_ambiental.html">Química Ambiental</a>
+            <a href="separacao.html">Separação de Misturas</a>
+            <a href="simulado_enem.html">Simulado ENEM</a>
+
+            <button class="logout-menu" onclick="logout()">Sair</button>
+        </nav>
+
+    </header>
+
+
+    <section class="content-card">
+        <div class="imagem-conteudo"><img src="img/separacao-misturas.jpg" alt="Separação de Misturas"
+                class="conteudo-img"></div>
+        <h2>Separação de Misturas (métodos práticos)</h2>
+        <p><b>Técnicas de separação aparecem em contexto de química experimental e
+                industrial: destilação de petróleo, purificação de produtos, tratamento de água e
+                laboratórios.</b><br></p>
+        <ul>
+            <li>
+                <h3>Filtração:</h3>
+            </li>
+            <p>Separa sólido insolúvel de um líquido.</p>
+            <li>
+                <h3>Decantação:</h3>
+            </li>
+            <p>Separa líquidos imiscíveis ou sólido sedimentado.</p>
+            <li>
+                <h3>Centrifugação:</h3>
+            </li>
+            <p>Acelera decantação por força centrífuga.</p>
+            <li>
+                <h3>Destilação simples: </h3>
+            </li>
+            <p>Separa líquidos com diferença grande de ponto de ebulição;
+                destilação fracionada para misturas mais próximas (ex.: frações do petróleo).</p>
+            <li>
+                <h3>Destilação fracionada:</h3>
+            </li>
+            <p>Para misturas mais próximas (ex.: frações do petróleo).</p>
+            <li>
+                <h3> Extração com solvente:</h3>
+            </li>
+            <p>Separa por solubilidade diferencial.</p>
+            <li>
+                <h3>Cromatografia: </h3>
+            </li>
+            <p>Separa componentes por afinidade entre fase móvel e
+                estacionária (útil em análises qualitativas e quantitativas).</p>
+        </ul>
+    </section>
+
+    <section class="questao">
+        <h2>Questão de Fixação</h2>
+        <p>Qual técnica é mais apropriada para separar ácidos graxos voláteis de uma
+            mistura líquida onde os componentes têm pontos de ebulição bem diferentes?:</p>
+
+        <div class="alternativas">
+            <button onclick="responderQuestao(this, false)"><strong>A)</strong> Filtração
+            </button>
+            <button onclick="responderQuestao(this, false)"><strong>B)</strong> Decantação
+            </button>
+            <button onclick="responderQuestao(this, true)"><strong>C)</strong> Destilação</button>
+            <button onclick="responderQuestao(this, false)"><strong>D)</strong> Centrifugação</button>
+            <button onclick="responderQuestao(this, false)"><strong>E)</strong> Cromatografia
+            </button>
+        </div>
+
+        <p class="quiz-msg"></p>
+
+        <button class="btn-resolucao" onclick="mostrarResolucao(this)"> Ver resolução
+        </button>
+
+        <div class="resolucao" style="display: none;">
+            <p><strong>Resolução:</strong><br>
+                Destilação separa componentes com diferentes pontos de ebulição
+                aquecendo a mistura e condensando os vapores. Se os pontos são bem
+                diferentes, destilação simples é eficaz. Filtração e decantação se aplicam a
+                sólidos ou fases imiscíveis; centrifugação é para acelerar separação por
+                densidade; cromatografia é possível, mas destilação é mais direta para separar
+                por volatilidade.
+                Por isso, a alternativa correta é a letra <strong>C</strong>.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        function verificar(botao, correta) {
+            const alternativas = document.querySelectorAll(".alt");
+            const msg = document.getElementById("quiz-msg");
+            const botaoResolucao = document.getElementById("btn-resolucao");
+
+            alternativas.forEach(a => {
+                a.disabled = true;
+            });
+
+            let letra = botao.textContent.trim().charAt(0);
+
+            if (letra === correta) {
+                botao.style.backgroundColor = "#2ecc71";
+                msg.textContent = "Resposta correta!";
+                msg.style.color = "#2ecc71";
+            } else {
+                botao.style.backgroundColor = "#e74c3c";
+                msg.textContent = "Resposta errada!";
+                msg.style.color = "#e74c3c";
+            }
+
+            botaoResolucao.style.display = "block";
+        }
+
+        function mostrarResolucao() {
+            document.getElementById("box-resolucao").style.display = "block";
+        }
+    </script>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Propriedades Coligativas</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+
+<body>
+    <header class="header">
+
+        <h1 class="titulo-com-icone">
+            <img src="img/favicon.png" alt="Ícone">
+            Átomo Digital
+        </h1>
+
+        <!-- Botão do menu -->
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <!-- Menu retrátil -->
+        <nav class="menu" id="menu">
+            <a href="home.html">Início</a>
+            <a href="ligacoes_quimicas.html">Ligações Químicas</a>
+            <a href="funcoes_inorganicas.html">Funções Inorgânicas</a>
+            <a href="estequiometria.html">Estequiometria</a>
+            <a href="termoquimica.html">Termoquímica</a>
+            <a href="solucoes.html">Soluções e Concentração</a>
+            <a href="propriedades_coligativas.html">Propriedades Coligativas</a>
+            <a href="eletroquimica.html">Eletroquímica</a>
+            <a href="quimica_organica.html">Química Orgânica</a>
+            <a href="quimica_ambiental.html">Química Ambiental</a>
+            <a href="separacao.html">Separação de Misturas</a>
+            <a href="simulado_enem.html">Simulado ENEM</a>
+
+            <button class="logout-menu" onclick="logout()">Sair</button>
+        </nav>
+
+    </header>
+
+
+    <section class="content-card">
+        <div class="imagem-conteudo"><img src="img/coligativas.webp" alt="Propriedades Coligativas"
+                class="conteudo-img"></div>
+        <h2>Propriedades Coligativas</h2>
+        <b>
+            <p>Propriedades coligativas dependem apenas do <b>número de partículas</b><br> de soluto
+                em solução ideal, não do tipo de partícula. Tem aplicações práticas em salgar
+                estradas, proteção de alimentos, etc.</p>
+        </b><br>
+        <ul>
+            <li>
+                <h3>Redução da pressão de vapor:</h3>
+            </li>
+            <p>presença de soluto diminui a tendência do
+                solvente evaporar</p>
+            <li>
+                <h3>Elevação do ponto de ebulição (ebuliometria): </h3>
+            </li>
+            <p>solução tem ponto de ebulição
+                maior que o solvente puro; quantidade proporcional à molalidade e fator de Van ’t
+                Hoff (i) para solutos iônicos</p>
+            <li>
+                <h3>Depressão do ponto de congelamento (criometria):</h3>
+            </li>
+            <p>sal na água diminui ponto
+                de congelamento (útil para derreter gelo).</p>
+            <li>
+                <h3>Osmose:</h3>
+            </li>
+            <p>passagem de solvente por membrana semipermeável;</p>
+            <p><b>
+                    <li>pressão osmótica</li>
+                </b><br> da concentração.</p>
+            <p>Para soluções de eletrólitos, número efetivo de partículas aumenta (ex.: NaCl →
+                Na⁺ + Cl⁻ → i ≈ 2).</p>
+        </ul>
+    </section>
+
+    <section class="questao">
+        <h2>Questão de Fixação</h2>
+        <p>Adicionar um soluto não volátil a um solvente puro provoca::</p>
+
+        <div class="alternativas">
+            <button onclick="responderQuestao(this, false)"><strong>A)</strong>diminuição do ponto de
+                ebuliçã</button>
+            <button onclick="responderQuestao(this, true)"><strong>B)</strong> aumento do ponto de ebulição</button>
+            <button onclick="responderQuestao(this, false)"><strong>C)</strong> aumento da pressão de vapor</button>
+            <button onclick="responderQuestao(this, false)"><strong>D)</strong> diminuição do ponto de congelamento
+                apenas se o soluto for iônico</button>
+            <button onclick="responderQuestao(this, false)"><strong>E)</strong> sem efeitos coligativos</button>
+        </div>
+
+        <p class="quiz-msg"></p>
+
+        <button class="btn-resolucao" onclick="mostrarResolucao(this)"> Ver resolução
+        </button>
+
+        <div class="resolucao" style="display: none;">
+            <p><strong>Resolução:</strong><br>
+                A presença de soluto não volátil reduz a pressão de vapor da solução;
+                como consequência, para que a pressão de vapor atinja a pressão externa
+                (ebulição), é necessário mais calor, ou seja, o ponto de ebulição aumenta. A
+                depressão do ponto de congelamento também ocorre, mas a alternativa D está
+                errada porque a depressão ocorre para solutos iônicos e não iônicos — a
+                magnitude difere.
+                Por isso, a alternativa correta é a letra <strong>B</strong>.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        function verificar(botao, correta) {
+            const alternativas = document.querySelectorAll(".alt");
+            const msg = document.getElementById("quiz-msg");
+            const botaoResolucao = document.getElementById("btn-resolucao");
+
+            alternativas.forEach(a => {
+                a.disabled = true;
+            });
+
+            let letra = botao.textContent.trim().charAt(0);
+
+            if (letra === correta) {
+                botao.style.backgroundColor = "#2ecc71";
+                msg.textContent = "Resposta correta!";
+                msg.style.color = "#2ecc71";
+            } else {
+                botao.style.backgroundColor = "#e74c3c";
+                msg.textContent = "Resposta errada!";
+                msg.style.color = "#e74c3c";
+            }
+
+            botaoResolucao.style.display = "block";
+        }
+
+        function mostrarResolucao() {
+            document.getElementById("box-resolucao").style.display = "block";
+        }
+    </script>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

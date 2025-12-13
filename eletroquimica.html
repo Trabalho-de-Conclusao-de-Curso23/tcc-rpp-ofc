@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Eletroquímica</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+
+<body>
+    <header class="header">
+
+        <h1 class="titulo-com-icone">
+            <img src="img/favicon.png" alt="Ícone">
+            Átomo Digital
+        </h1>
+
+        <!-- Botão do menu -->
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <!-- Menu retrátil -->
+        <nav class="menu" id="menu">
+            <a href="home.html">Início</a>
+            <a href="ligacoes_quimicas.html">Ligações Químicas</a>
+            <a href="funcoes_inorganicas.html">Funções Inorgânicas</a>
+            <a href="estequiometria.html">Estequiometria</a>
+            <a href="termoquimica.html">Termoquímica</a>
+            <a href="solucoes.html">Soluções e Concentração</a>
+            <a href="propriedades_coligativas.html">Propriedades Coligativas</a>
+            <a href="eletroquimica.html">Eletroquímica</a>
+            <a href="quimica_organica.html">Química Orgânica</a>
+            <a href="quimica_ambiental.html">Química Ambiental</a>
+            <a href="separacao.html">Separação de Misturas</a>
+            <a href="simulado_enem.html">Simulado ENEM</a>
+
+            <button class="logout-menu" onclick="logout()">Sair</button>
+        </nav>
+
+    </header>
+
+
+    <section class="content-card">
+        <div class="imagem-conteudo"><img src="img/eletroquimica.jpg" alt="Eletroquímica" class="conteudo-img"></div>
+        <h2>Eletroquímica (Redox, Pilhas e Eletrólise)</h2>
+        <p><b>Eletroquímica trata de transferência de elétrons. Surgem em temas práticos
+                (pilhas, corrosão, galvanoplastia). É frequentemente cobrada por questões de
+                identificação de agente oxidante/reduzente e interpretação de pilhas.</b><br></p>
+        <ul>
+            <li>
+                <h3>Oxidação:</h3>
+            </li>
+            <p>perda de elétrons;</p>
+            <li>
+                <h3>redução:</h3>
+            </li>
+            <p> ganho de elétrons.</p>
+            <p><b>OX = perda, RED = ganho.</b><br></p>
+            <li>
+                <h3> Agente oxidante:</h3>
+            </li>
+            <p> o que causa a oxidação do outro (ele próprio é reduzido). </p>
+            <li>
+                <h3> Agente redutor:</h3>
+            </li>
+            <p> o que causa a redução do outro (ele próprio é oxidado).</p>
+            <li>
+                <h3> Pilhas:</h3>
+            </li>
+            <p> reações espontâneas que geram corrente. Ânodo (oxidação), cátodo
+                (redução). Potencial padrão (E°) indica tendência de redução.</p>
+            <li>
+                <h3> Eletrólise:</h3>
+            </li>
+            <p> impulsa reações não espontâneas usando energia elétrica (ex.:
+                obtenção de alumínio, galvanoplastia).</p>
+            <li>
+                <h3> Aplicações:</h3>
+            </li>
+            <p> baterias, corrosão (oxidação de metais), proteção catódica.</p>
+        </ul>
+    </section>
+
+    <section class="questao">
+        <h2>Questão de Fixação</h2>
+        <p>Considere a meia-reação: Zn → Zn²⁺ + 2e⁻. Essa meia-reação corresponde a:</p>
+
+        <div class="alternativas">
+            <button onclick="responderQuestao(this, false)"><strong>A)</strong> redução do Zn</button>
+            <button onclick="responderQuestao(this, true)"><strong>B)</strong> oxidação do Zn
+            </button>
+            <button onclick="responderQuestao(this, false)"><strong>C)</strong> reação de neutralização</button>
+            <button onclick="responderQuestao(this, false)"><strong>D)</strong> eletrólise do Zn²⁺</button>
+            <button onclick="responderQuestao(this, false)"><strong>E)</strong> reação de deslocamento simples sem
+                elétrons</button>
+        </div>
+
+        <p class="quiz-msg"></p>
+
+        <button class="btn-resolucao" onclick="mostrarResolucao(this)"> Ver resolução
+        </button>
+
+        <div class="resolucao" style="display: none;">
+            <p><strong>Resolução:</strong><br>
+                A meia-reação mostra Zn perdendo dois elétrons para formar Zn²⁺;
+                perda de elétrons é definição de oxidação. A reação é parte de um processo redox;
+                para haver corrente, precisa existir outra meia-reação (redução) que consuma os
+                elétrons.
+                Por isso, a alternativa correta é a letra <strong>B</strong>.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        function verificar(botao, correta) {
+            const alternativas = document.querySelectorAll(".alt");
+            const msg = document.getElementById("quiz-msg");
+            const botaoResolucao = document.getElementById("btn-resolucao");
+
+            alternativas.forEach(a => {
+                a.disabled = true;
+            });
+
+            let letra = botao.textContent.trim().charAt(0);
+
+            if (letra === correta) {
+                botao.style.backgroundColor = "#2ecc71";
+                msg.textContent = "Resposta correta!";
+                msg.style.color = "#2ecc71";
+            } else {
+                botao.style.backgroundColor = "#e74c3c";
+                msg.textContent = "Resposta errada!";
+                msg.style.color = "#e74c3c";
+            }
+
+            botaoResolucao.style.display = "block";
+        }
+
+        function mostrarResolucao() {
+            document.getElementById("box-resolucao").style.display = "block";
+        }
+    </script>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

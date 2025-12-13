@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Átomo Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <h1 class="titulo-com-icone">
+            <img src="img/favicon.png" alt="Ícone">
+            Átomo Digital
+        </h1>
+
+        <!-- Botão do menu -->
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <!-- Menu retrátil -->
+        <nav class="menu" id="menu">
+            <a href="home.html">Início</a>
+            <a href="ligacoes_quimicas.html">Ligações Químicas</a>
+            <a href="funcoes_inorganicas.html">Funções Inorgânicas</a>
+            <a href="estequiometria.html">Estequiometria</a>
+            <a href="termoquimica.html">Termoquímica</a>
+            <a href="solucoes.html">Soluções e Concentração</a>
+            <a href="propriedades_coligativas.html">Propriedades Coligativas</a>
+            <a href="eletroquimica.html">Eletroquímica</a>
+            <a href="quimica_organica.html">Química Orgânica</a>
+            <a href="quimica_ambiental.html">Química Ambiental</a>
+            <a href="separacao.html">Separação de Misturas</a>
+            <a href="simulado_enem.html">Simulado ENEM</a>
+
+            <button class="logout-menu" onclick="logout()">Sair</button>
+        </nav>
+
+    </header>
+
+
+
+    <!-- Conteúdo da página inicial -->
+    <main class="content">
+        <h2>Bem-vindo ao Portal de Aprendizado de Química!</h2>
+
+        <p>
+            Este site foi criado para auxiliar estudantes no aprendizado de química de forma simples, interativa e
+            direta.
+            Aqui você encontra explicações, materiais, exercícios e ferramentas para tornar o estudo mais eficiente.
+        </p>
+
+        <p>
+            Explore conteúdos sobre ligações químicas, reações, termoquímica e muito mais!
+        </p>
+
+        <!-- ======================= -->
+        <!-- CARDS DE CONTEÚDO -->
+        <!-- ======================= -->
+        <section class="cards-container">
+
+            <!-- 1 - Ligações Químicas -->
+            <a href="ligacoes_quimicas.html" class="card">
+                <img src="img/ligacoes.jpg" alt="Ligações químicas">
+                <h3>Ligações Químicas</h3>
+                <p>Entenda como os átomos se unem para formar substâncias.</p>
+            </a>
+
+            <!-- 2 - Funções Inorgânicas -->
+            <a href="funcoes_inorganicas.html" class="card">
+                <img src="img/funcoes_inorganicas.png" alt="Funções inorgânicas">
+                <h3>Funções Inorgânicas</h3>
+                <p>Ácidos, bases, sais e óxidos explicados de forma simples.</p>
+            </a>
+
+            <!-- 3 - Estequiometria -->
+            <a href="estequiometria.html" class="card">
+                <img src="img/estequiometria.webp" alt="Estequiometria">
+                <h3>Estequiometria</h3>
+                <p>Calcule quantidades de reagentes e produtos nas reações.</p>
+            </a>
+
+            <!-- 4 - Termoquímica -->
+            <a href="termoquimica.html" class="card">
+                <img src="img/termoquimica.webp" alt="Termoquímica">
+                <h3>Termoquímica</h3>
+                <p>Estude calor liberado ou absorvido nas reações químicas.</p>
+            </a>
+
+            <!-- 5 - Soluções e Concentração -->
+            <a href="solucoes.html" class="card">
+                <img src="img/solucoes.png" alt="Soluções">
+                <h3>Soluções e Concentração</h3>
+                <p>Entenda solventes, solutos e cálculos de concentração.</p>
+            </a>
+
+            <!-- 6 - Propriedades coligativas -->
+            <a href="propriedades_coligativas.html" class="card">
+                <img src="img/coligativas.webp" alt="Propriedades coligativas">
+                <h3>Propriedades Coligativas</h3>
+                <p>Veja como partículas influenciam o comportamento das soluções.</p>
+            </a>
+
+            <!-- 7 - Eletroquímica -->
+            <a href="eletroquimica.html" class="card">
+                <img src="img/eletroquimica.jpeg" alt="Eletroquímica">
+                <h3>Eletroquímica</h3>
+                <p>Reações que envolvem transferência de elétrons.</p>
+            </a>
+
+            <!-- 8 - Química Orgânica -->
+            <a href="quimica_organica.html" class="card">
+                <img src="img/organica.png" alt="Química orgânica">
+                <h3>Química Orgânica</h3>
+                <p>Funções orgânicas e tipos de reações.</p>
+            </a>
+
+            <!-- 9 - Química Ambiental -->
+            <a href="quimica_ambiental.html" class="card">
+                <img src="img/quim_amb.jpg" alt="Química ambiental">
+                <h3>Química Ambiental</h3>
+                <p>Poluição, tratamento de água e impactos ambientais.</p>
+            </a>
+
+            <!-- 10 - Separação de Misturas -->
+            <a href="separacao.html" class="card">
+                <img src="img/separacao-misturas.jpg" alt="Separação de misturas">
+                <h3>Separação de Misturas</h3>
+                <p>Métodos para separar componentes de misturas.</p>
+            </a>
+
+        </section>
+
+        <!-- ======================= -->
+        <!-- CHAMADA PARA SIMULADO ENEM -->
+        <!-- ======================= -->
+        <section class="simulado-chamada">
+            <h2>📘 Simulado ENEM de Química</h2>
+            <p>Teste seus conhecimentos com questões nos estilos do ENEM, abrangendo todos os conteúdos do site.</p>
+            <a href="simulado_enem.html" class="btn-simulado">Ir para o Simulado</a>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

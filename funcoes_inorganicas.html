@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Funções Inorgânicas</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+
+<body>
+    <header class="header">
+
+        <h1 class="titulo-com-icone">
+            <img src="img/favicon.png" alt="Ícone">
+            Átomo Digital
+        </h1>
+
+        <!-- Botão do menu -->
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <!-- Menu retrátil -->
+        <nav class="menu" id="menu">
+            <a href="home.html">Início</a>
+            <a href="ligacoes_quimicas.html">Ligações Químicas</a>
+            <a href="funcoes_inorganicas.html">Funções Inorgânicas</a>
+            <a href="estequiometria.html">Estequiometria</a>
+            <a href="termoquimica.html">Termoquímica</a>
+            <a href="solucoes.html">Soluções e Concentração</a>
+            <a href="propriedades_coligativas.html">Propriedades Coligativas</a>
+            <a href="eletroquimica.html">Eletroquímica</a>
+            <a href="quimica_organica.html">Química Orgânica</a>
+            <a href="quimica_ambiental.html">Química Ambiental</a>
+            <a href="separacao.html">Separação de Misturas</a>
+            <a href="simulado_enem.html">Simulado ENEM</a>
+
+            <button class="logout-menu" onclick="logout()">Sair</button>
+        </nav>
+
+    </header>
+
+
+    <section class="content-card">
+        <div class="imagem-conteudo"><img src="img/funcoes_inorganicas.png" alt="Funções Inorgânicas"
+                class="conteudo-img"></div>
+        <h2>Funções Inorgânicas</h2>
+        <b>
+            <p>Funções inorgânicas são categorias de compostos com comportamento químico
+                semelhante. No ENEM aparecem questões sobre reconhecimento, reações de
+                neutralização e propriedades ambientais (chuva ácida, por exemplo).</p>
+        </b><br>
+
+        <ul>
+            <li>
+                <h3>Ácidos:</h3>
+            </li>
+            <p>Em solução aquosa liberam H⁺ (protônicos). Classificação: fortes (HCl,
+                HNO₃, H₂SO₄ — dissociação quase completa) e fracos (ácido acético —
+                dissociação parcial). Indicadores e pH ajudam a identificar força e concentração.</p>
+            <li>
+                <h3>Bases:</h3>
+            </li>
+            <p>Lliberam OH⁻ em solução (NaOH, KOH). Bases fortes conduzem eletrólise e
+                são corrosivas.</p>
+            <li>
+                <h3>Sais:</h3>
+            </li>
+            <p>Formados por cátions e ânions (resultado comum de neutralização). A
+                natureza do sal (se resultante de ácido/base forte ou fraco) influencia o pH da
+                solução salina.</p>
+            <li>
+                <h3>Óxidos:</h3>
+            </li>
+            <p> Em ácidos (óxidos de não metais, ex.: SO₂ → reage com
+                água formando ácido sulfuroso), básicos (óxidos metálicos, ex.: Na₂O → reage com
+                água formando NaOH), anfóteros (reagem tanto com ácidos quanto com bases,
+                ex.: ZnO) e neutros (CO). No ENEM costuma-se relacionar óxidos a efeitos
+                ambientais e reações com água.</p>
+        </ul>
+    </section>
+
+    <section class="questao">
+        <h2>Questão de Fixação</h2>
+        <p> Qual produto principal da reação entre ácido clorídrico (HCl) e hidróxido de sódio
+            (NaOH)?:</p>
+
+        <div class="alternativas">
+            <button onclick="responderQuestao(this, false)"><strong>A)</strong> H₂ + NaCl </button>
+            <button onclick="responderQuestao(this, true)"><strong>B)</strong> H₂O + NaCl </button>
+            <button onclick="responderQuestao(this, false)"><strong>C)</strong> Na₂O + H₂ </button>
+            <button onclick="responderQuestao(this, false)"><strong>D)</strong> Cl₂ + NaOH
+            </button>
+            <button onclick="responderQuestao(this, false)"><strong>E)</strong> NaClO + H₂O </button>
+        </div>
+
+        <p class="quiz-msg"></p>
+
+        <button class="btn-resolucao" onclick="mostrarResolucao(this)"> Ver resolução
+        </button>
+
+        <div class="resolucao" style="display: none;">
+            <p><strong>Resolução:</strong><br>
+                A reação entre ácido e base é uma neutralização: HCl + NaOH →
+                NaCl + H₂O. O ácido fornece H⁺, a base fornece OH⁻; H⁺ + OH⁻ → H₂O. O sal
+                formado é NaCl. As outras alternativas indicam reações de desalinhamento ou
+                eletrólise, que não ocorrem espontaneamente apenas misturando as substâncias.
+
+                Por isso, a alternativa correta é a letra <strong>B</strong>.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        function verificar(botao, correta) {
+            const alternativas = document.querySelectorAll(".alt");
+            const msg = document.getElementById("quiz-msg");
+            const botaoResolucao = document.getElementById("btn-resolucao");
+
+            alternativas.forEach(a => {
+                a.disabled = true;
+            });
+
+            let letra = botao.textContent.trim().charAt(0);
+
+            if (letra === correta) {
+                botao.style.backgroundColor = "#2ecc71";
+                msg.textContent = "Resposta correta!";
+                msg.style.color = "#2ecc71";
+            } else {
+                botao.style.backgroundColor = "#e74c3c";
+                msg.textContent = "Resposta errada!";
+                msg.style.color = "#e74c3c";
+            }
+
+            botaoResolucao.style.display = "block";
+        }
+
+        function mostrarResolucao() {
+            document.getElementById("box-resolucao").style.display = "block";
+        }
+    </script>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

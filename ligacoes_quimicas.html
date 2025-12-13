@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ligações Químicas</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+
+<body>
+    <header class="header">
+
+        <h1 class="titulo-com-icone">
+            <img src="img/favicon.png" alt="Ícone">
+            Átomo Digital
+        </h1>
+
+        <!-- Botão do menu -->
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <!-- Menu retrátil -->
+        <nav class="menu" id="menu">
+            <a href="home.html">Início</a>
+            <a href="ligacoes_quimicas.html">Ligações Químicas</a>
+            <a href="funcoes_inorganicas.html">Funções Inorgânicas</a>
+            <a href="estequiometria.html">Estequiometria</a>
+            <a href="termoquimica.html">Termoquímica</a>
+            <a href="solucoes.html">Soluções e Concentração</a>
+            <a href="propriedades_coligativas.html">Propriedades Coligativas</a>
+            <a href="eletroquimica.html">Eletroquímica</a>
+            <a href="quimica_organica.html">Química Orgânica</a>
+            <a href="quimica_ambiental.html">Química Ambiental</a>
+            <a href="separacao.html">Separação de Misturas</a>
+            <a href="simulado_enem.html">Simulado ENEM</a>
+
+            <button class="logout-menu" onclick="logout()">Sair</button>
+        </nav>
+
+    </header>
+
+
+    <section class="content-card">
+        <div class="imagem-conteudo"><img src="img/ligacoes.jpg" alt="Ligações Químicas" class="conteudo-img"></div>
+        <h2>Ligações Químicas</h2>
+        <p>
+            <b>As ligações químicas são as forças responsáveis por manter átomos juntos
+                formando moléculas e sólidos. Entender o tipo de ligação é fundamental para
+                prever propriedades físicas e químicas (ponto de fusão, condutividade,
+                solubilidade, estado físico).
+        </p> </b><br>
+        <ul>
+            <li>
+                <h3>Ligação iônica:</h3>
+            </li>
+            <p>Entre metais (doadores) e ametais (aceptores). Um átomo
+                perde elétrons (vira cátion) e outro ganha (vira ânion). A força eletrostática entre
+                íons de sinais opostos mantém o composto. São sólidos cristalinos, geralmente
+                com altos pontos de fusão e ebulição; não conduzem corrente no sólido, mas
+                conduzem quando fundidos ou em solução aquosa porque íons ficam livres para
+                se mover. Exemplos: NaCl, CaF₂.</p>
+            <li>
+                <h3>Ligação covalente:</h3>
+            </li>
+            <p>Ocorre entre ametais. Átomos compartilham pares de elétrons
+                para atingir estabilidade. Pode ser: covalente simples, dupla, tripla; polar
+                (diferença de eletronegatividade cria polos) ou apolar. Moléculas covalentes
+                podem ser gases, líquidos ou sólidos com pontos de fusão variados; em geral,
+                maus condutores elétricos (exceto em casos especiais). Exemplos: H₂O (polar), O₂
+                (apolar).</p>
+            <li>
+                <h3>Ligação metálica:</h3>
+            </li>
+            <p>Entre átomos de metal; elétrons de valência se deslocalizam
+                formando um “mar de elétrons” ao redor de cátions metálicos. Explica
+                propriedades como maleabilidade, ductilidade, brilho e boa condutividade
+                elétrica e térmica. Exemplos: Fe, Al, Cu.</p>
+            <li>
+                <h3>Forças intermoleculares (importantes para prever estados e propriedades):</h3>
+            </li>
+            <p>Forças de London (dispersão), dipolo-dipolo e ligações por hidrogênio (H ligado a
+                F/O/N em uma molécula e atraído por F/O/N de outra). Ligações de hidrogênio
+                elevam pontos de ebulição (ex.: H₂O).</p>
+        </ul>
+    </section>
+
+    <section class="questao">
+        <h2>Questão de Fixação</h2>
+        <p> Um sólido cristalino apresenta alto ponto de fusão, é frágil e sua solução aquosa
+            conduz corrente elétrica. Qual o tipo de ligação predominante no sólido?:</p>
+
+        <div class="alternativas">
+            <button onclick="responderQuestao(this, false)"><strong>A)</strong> Metálica</button>
+            <button onclick="responderQuestao(this, false)"><strong>B)</strong> Covalente apolar</button>
+            <button onclick="responderQuestao(this, false)"><strong>C)</strong> Covalente polar</button>
+            <button onclick="responderQuestao(this, true)"><strong>D)</strong> Iônica</button>
+            <button onclick="responderQuestao(this, false)"><strong>E)</strong> Força de London</button>
+        </div>
+
+        <p class="quiz-msg"></p>
+
+        <button class="btn-resolucao" onclick="mostrarResolucao(this)"> Ver resolução
+        </button>
+
+        <div class="resolucao" style="display: none;">
+            <p><strong>Resolução:</strong><br>
+                Alto ponto de fusão e condução elétrica em solução são
+                características típicas de compostos iônicos. A fragilidade (quando se aplica
+                tensão as camadas iônicas se deslocam e íons de mesmo sinal se aproximam
+                causando fratura) também é típica de sólidos iônicos. Compostos metálicos
+                seriam maleáveis (não frágeis) e conduziriam no estado sólido; covalentes
+                apolares têm baixos pontos de fusão; covalentes polares geralmente não
+                conduzem em solução (não formam íons livres); forças de London são fracas e
+                associadas a baixos pontos de fusão.
+                Por isso, a alternativa correta é a letra <strong>D</strong>.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        function verificar(botao, correta) {
+            const alternativas = document.querySelectorAll(".alt");
+            const msg = document.getElementById("quiz-msg");
+            const botaoResolucao = document.getElementById("btn-resolucao");
+
+            alternativas.forEach(a => {
+                a.disabled = true;
+            });
+
+            let letra = botao.textContent.trim().charAt(0);
+
+            if (letra === correta) {
+                botao.style.backgroundColor = "#2ecc71";
+                msg.textContent = "Resposta correta!";
+                msg.style.color = "#2ecc71";
+            } else {
+                botao.style.backgroundColor = "#e74c3c";
+                msg.textContent = "Resposta errada!";
+                msg.style.color = "#e74c3c";
+            }
+
+            botaoResolucao.style.display = "block";
+        }
+
+        function mostrarResolucao() {
+            document.getElementById("box-resolucao").style.display = "block";
+        }
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

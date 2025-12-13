@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro - Átomo Digital</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+
+<body>
+  <div class="container">
+
+<!-- Logo -->
+    <div class="logo-box">
+        <img src="img/logoF.png" alt="Logo Átomo Digital">
+    </div>
+
+    <h2>Cadastrar</h2>
+
+    <form onsubmit="realizarCadastro(event)">
+      <label>Nome de Usuário</label>
+      <input type="text" id="cadUsuario" required>
+
+      <label>E-mail</label>
+      <input type="email" id="cadEmail" required>
+
+      <label>Senha</label>
+      <div class="senha-container">
+        <input type="password" id="cadSenha" required>
+        <span class="toggle-senha" onclick="toggleSenha('cadSenha', this)">👁</span>
+      </div>
+
+      <button class="btn">Criar Conta</button>
+
+      <p class="link">
+        Já tem conta? <a href="index.html">Entrar</a>
+      </p>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
