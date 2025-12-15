@@ -87,43 +87,34 @@ function logout() {
 }
 
 function responderQuestao(botao, correta) {
-  const questao = botao.closest(".questao");
-  const msg = questao.querySelector(".quiz-msg");
-  const alternativas = questao.querySelectorAll(".alternativas button");
+    const questao = botao.closest(".questao");
+    const msg = questao.querySelector(".quiz-msg");
+    const botoes = questao.querySelectorAll(".alternativas button");
 
-  alternativas.forEach(btn => {
-  btn.disabled = true;
-});
+    botoes.forEach(b => b.disabled = true);
 
-  // Marca resposta
-  if (correta) {
-    botao.style.background = "green";
-    msg.textContent = "Resposta correta!";
-    msg.style.color = "green";
-  } else {
-    botao.style.background = "red";
-    msg.textContent = "Resposta errada!";
-    msg.style.color = "red";
-  }
+    if (correta) {
+        botao.style.backgroundColor = "#2ecc71";
+        msg.textContent = "Resposta correta!";
+        msg.style.color = "#2ecc71";
+    } else {
+        botao.style.backgroundColor = "#e74c3c";
+        msg.textContent = "Resposta incorreta.";
+        msg.style.color = "#e74c3c";
+    }
 }
 
-
 function mostrarResolucao(botao) {
-  const questao = botao.closest(".questao");
-  const resolucao = questao.querySelector(".resolucao");
+    const questao = botao.closest(".questao");
+    const resolucao = questao.querySelector(".resolucao");
 
-  if (!resolucao) {
-    console.error("Resolução não encontrada nesta questão");
-    return;
-  }
-
-  if (resolucao.style.display === "block") {
-    resolucao.style.display = "none";
-    botao.textContent = "Ver resolução";
-  } else {
-    resolucao.style.display = "block";
-    botao.textContent = "Ocultar resolução";
-  }
+    if (resolucao.style.display === "block") {
+        resolucao.style.display = "none";
+        botao.textContent = "Ver resolução";
+    } else {
+        resolucao.style.display = "block";
+        botao.textContent = "Ocultar resolução";
+    }
 }
 
 function toggleMenu() {
@@ -140,3 +131,4 @@ function toggleMenu() {
     menu.classList.add("ativo");
   }
 }
+
