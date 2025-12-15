@@ -255,41 +255,6 @@ p {
 }
 
 /* ====== ESTILO DA QUESTÃO DE FIXAÇÃO ====== */
-.quiz-box {
-    margin: 30px auto;
-    padding: 20px;
-    background: #f0f7ff;
-    border-left: 6px solid #0077cc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
-}
-
-
-.quiz-box h2 {
-    margin-top: 0;
-    color: #005fa3;
-}
-
-
-.alt {
-    display: block;
-    width: 100%;
-    margin: 8px 0;
-    padding: 12px;
-    background: #0077cc;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-
-.alt:hover {
-    filter: brightness(1.1);
-}
-
 
 .quiz-msg {
     font-size: 18px;
@@ -697,6 +662,7 @@ p {
     border-left: 4px solid #bb1684;
     border-radius: 6px;
 }
+
 
 
 
