@@ -39,12 +39,12 @@
     display: block;
     padding: 8px;
     text-decoration: none;
-    color: #0a4fa3;
+    color: #66124a;
     font-weight: 500;
 }
 
 .menu a:hover {
-    background-color: #e6f0ff;
+    background-color: #f8cfe7;
     border-radius: 5px;
 }
 
@@ -53,7 +53,7 @@
     width: 100%;
     margin-top: 10px;
     padding: 8px;
-    background-color: #d9534f;
+    background-color: #da18a9;
     color: white;
     border: none;
     border-radius: 5px;
@@ -310,7 +310,7 @@ p {
 
 
 .btn-resolucao:hover {
-    background: #bb1684;
+    background: #770c53;
 }
 
 
@@ -341,8 +341,7 @@ p {
 }
 
 .toggle-senha:hover {
-    color: #005fa3;
-}
+    color: #690b4a;
 
 /* ============================= */
 /* CAMPOS DE FORMULÁRIO */
@@ -437,7 +436,7 @@ p {
 }
 
 .btn-simulado:hover {
-    background-color: #1a5fc2;
+    background-color: #770c53;
 }
 
 .questao {
@@ -461,12 +460,12 @@ p {
     border-radius: 8px;
     border: 1px solid #aaa;
     cursor: pointer;
-    background-color: #f5f5f5;
+    background-color: #f8cfe7;
     text-align: left;
 }
 
 .alternativas button:hover {
-    background-color: #e0ecff;
+    background-color: #fc9cd4;
 }
 
 .quiz-msg {
@@ -478,7 +477,7 @@ p {
     margin-top: 15px;
     padding: 10px 18px;
     border-radius: 8px;
-    background-color: #2c7be5;
+    background-color: #bb1684;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -489,11 +488,9 @@ p {
     margin-top: 15px;
     padding: 12px;
     background: #f5f8ff;
-    border-left: 4px solid #0077cc;
+    border-left: 4px solid #bb1684;
     border-radius: 6px;
 }
-
-
 
 /* Logo */
 .logo-box {
@@ -636,5 +633,6 @@ p {
         grid-template-columns: 1fr;
     }
 }
+
 
 
