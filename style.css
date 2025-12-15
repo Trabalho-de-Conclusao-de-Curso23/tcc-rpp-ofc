@@ -645,5 +645,58 @@ p {
     box-sizing: border-box;
 }
 
+/* =========================
+   QUESTÕES – PADRÃO ÚNICO
+========================= */
+
+.questao {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 800px;
+    background-color: #ffffff;
+}
+
+.questao img.conteudo-img {
+    display: block;
+    margin: 20px auto;
+}
+
+.alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.alternativas button {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    cursor: pointer;
+    background-color: #f8cfe7;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.alternativas button:hover {
+    background-color: #fc9cd4;
+}
+
+.quiz-msg {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.resolucao {
+    display: none;
+    margin-top: 15px;
+    padding: 12px;
+    background: #f5f8ff;
+    border-left: 4px solid #bb1684;
+    border-radius: 6px;
+}
+
 
 
