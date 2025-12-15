@@ -406,13 +406,14 @@ p {
 }
 
 .questao {
-    border: 1px solid #ccc;
-    border-radius: 12px;
+    background-color: #ffffff;
+    border-radius: 14px;
     padding: 25px;
-    margin: 30px auto;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
     max-width: 800px;
-    background-color: #fff;
-}
+    width: 100%;
+    margin: 0 auto;
+}    
 
 .alternativas {
     display: flex;
@@ -528,6 +529,11 @@ p {
 ========================= */
 @media (max-width: 768px) {
 
+    .questao {
+        padding: 18px;
+        border-radius: 12px;
+    }
+    
     .cards-container {
         grid-template-columns: repeat(2, 1fr);
         padding: 14px;
@@ -670,6 +676,7 @@ p {
     gap: 25px;
     padding: 20px;
 }
+
 
 
 
