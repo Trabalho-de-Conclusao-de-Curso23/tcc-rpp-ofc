@@ -78,6 +78,10 @@ body {
     padding: 0;
 }
 
+body {
+    padding: 0 10px;
+}
+
 .titulo-com-icone {
     display: flex;
     align-items: center;
@@ -535,15 +539,16 @@ p {
 
 /*responsividade*/
 @media (max-width: 600px) {
-
     .container {
-        width: 90%;
-        padding: 20px;
+        width: 100%;
+        max-width: 360px;     /* impede ficar largo demais */
         margin: 30px auto;
+        padding: 20px;
+        box-sizing: border-box;
     }
 
     .logo-box img {
-        width: 50px;
+        width: 70px;
     }
 
     .logo-box h1 {
@@ -555,6 +560,7 @@ p {
         font-size: 1rem;
     }
 }
+
 
 @media (max-width: 768px) {
 
@@ -647,5 +653,11 @@ p {
 
     .card p {
         font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 18px;
     }
 }
