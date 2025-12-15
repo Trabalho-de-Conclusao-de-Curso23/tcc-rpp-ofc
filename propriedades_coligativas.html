@@ -111,39 +111,10 @@
         </div>
     </section>
 
-    <script>
-        function verificar(botao, correta) {
-            const alternativas = document.querySelectorAll(".alt");
-            const msg = document.getElementById("quiz-msg");
-            const botaoResolucao = document.getElementById("btn-resolucao");
-
-            alternativas.forEach(a => {
-                a.disabled = true;
-            });
-
-            let letra = botao.textContent.trim().charAt(0);
-
-            if (letra === correta) {
-                botao.style.backgroundColor = "#2ecc71";
-                msg.textContent = "Resposta correta!";
-                msg.style.color = "#2ecc71";
-            } else {
-                botao.style.backgroundColor = "#e74c3c";
-                msg.textContent = "Resposta errada!";
-                msg.style.color = "#e74c3c";
-            }
-
-            botaoResolucao.style.display = "block";
-        }
-
-        function mostrarResolucao() {
-            document.getElementById("box-resolucao").style.display = "block";
-        }
-    </script>
-
     <script src="script.js"></script>
 
 
 </body>
+
 
 </html>
