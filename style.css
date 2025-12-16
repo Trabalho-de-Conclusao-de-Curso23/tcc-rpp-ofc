@@ -609,7 +609,7 @@ p {
 
     /* CARDS – GRANDES E TOCÁVEIS */
     .cards-container {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 16px;
         padding: 16px;
     }
@@ -737,6 +737,7 @@ p {
     padding: 20px;
     background-color: #f8cfe7;
 }
+
 
 
 
