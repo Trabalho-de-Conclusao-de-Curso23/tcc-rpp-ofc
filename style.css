@@ -308,6 +308,7 @@ p {
 
 .toggle-senha:hover {
     color: #690b4a;
+}    
 
 /* ============================= */
 /* CAMPOS DE FORMULÁRIO */
@@ -459,15 +460,20 @@ p {
     border-radius: 6px;
 }
 
-/* Logo */
+/* =========================
+   LOGO LOGIN
+========================= */
 .logo-box {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 25px;
 }
 
 .logo-box img {
-    width: 200px;
-    margin-bottom: 0px;
+    width: 140px;
+    max-width: 100%;
+    height: auto;
 }
 
 .logo-box h1 {
@@ -478,16 +484,16 @@ p {
 
 /*responsividade*/
 @media (max-width: 600px) {
+    .logo-box img {
+        width: 90px;
+    }
+    
     .container {
         width: 100%;
         max-width: 360px;     /* impede ficar largo demais */
         margin: 30px auto;
         padding: 20px;
         box-sizing: border-box;
-    }
-
-    .logo-box img {
-        width: 70px;
     }
 
     .logo-box h1 {
@@ -677,6 +683,7 @@ p {
     padding: 20px;
     background-color: #da18a9;
 }
+
 
 
 
