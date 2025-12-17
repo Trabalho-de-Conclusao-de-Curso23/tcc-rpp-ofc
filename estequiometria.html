@@ -41,84 +41,147 @@
     </header>
 
     <section class="questoes-container">
-    <section class="content-card">
-        <div class="imagem-conteudo"><img src="img/estequiometria.webp" alt="Estequiometria" class="conteudo-img"></div>
+        <section class="content-card">
+            <div class="imagem-conteudo"><img src="img/estequiometria.webp" alt="Estequiometria" class="conteudo-img">
+            </div>
 
-        <h2>Estequiometria</h2>
-        <p><b>É a área que permite quantificar reagentes e produtos numa
-                reação química: quantos mols, gramas ou litros são necessários ou produzidos. É
-                uma habilidade frequentemente exigida em problemas do ENEM que envolvem
-                raciocínio quantitativo.
+            <h2>Estequiometria</h2>
+            <p><b>É a área que permite quantificar reagentes e produtos numa
+                    reação química: quantos mols, gramas ou litros são necessários ou produzidos. É
+                    uma habilidade frequentemente exigida em problemas do ENEM que envolvem
+                    raciocínio quantitativo.
 
-                cada coeficiente indica proporção molar. Ex.: 2H₂ + O₂ → 2H₂O significa 2 mols de
-                H₂ reagem com 1 mol de O₂ para formar 2 mols de H₂O.</b><br></p>
+                    cada coeficiente indica proporção molar. Ex.: 2H₂ + O₂ → 2H₂O significa 2 mols de
+                    H₂ reagem com 1 mol de O₂ para formar 2 mols de H₂O.</b><br></p>
 
-        <ul>
-            <li>
-                <h3>Mol:</h3>
-            </li>
-            <p>unidade que relaciona partículas (6,02×10²³).</p>
-            <li>
-                <h3> Massa molar:</h3>
-            </li>
-            <p>soma das massas atômicas (g/mol). Para converter massa ↔ mol: n
-                = m / M.</p>
-            <li>
-                <h3> Volume de gases:</h3>
-            </li>
-            <p>em CNTP 1 mol de gás ≈ 22,4 L (atenção: ENEM costuma usar
-                condições- padrão; ver enunciado).</p>
-            <li>
-                <h3> Reagente limitante:</h3>
-            </li>
-            <p>o reagente que acaba primeiro limita a quantidade de
-                produto; determina rendimento teórico.</p>
-            <li>
-                <h3> Rendimento:</h3>
-            </li>
-            <p>rendimento real / rendimento teórico × 100%.</p>
-        </ul>
-    </section>
+            <ul>
+                <li>
+                    <h3>Mol:</h3>
+                </li>
+                <p>unidade que relaciona partículas (6,02×10²³).</p>
+                <li>
+                    <h3> Massa molar:</h3>
+                </li>
+                <p>soma das massas atômicas (g/mol). Para converter massa ↔ mol: n
+                    = m / M.</p>
+                <li>
+                    <h3> Volume de gases:</h3>
+                </li>
+                <p>em CNTP 1 mol de gás ≈ 22,4 L (atenção: ENEM costuma usar
+                    condições- padrão; ver enunciado).</p>
+                <li>
+                    <h3> Reagente limitante:</h3>
+                </li>
+                <p>o reagente que acaba primeiro limita a quantidade de
+                    produto; determina rendimento teórico.</p>
+                <li>
+                    <h3> Rendimento:</h3>
+                </li>
+                <p>rendimento real / rendimento teórico × 100%.</p>
+            </ul>
+        </section>
 
-    <section class="content-card">
-    <div class="questao">
-        <h2>Questão de Fixação</h2>
-        <p> Equação: 2H₂ + O₂ → 2H₂O. Se eu tenho 4 mol de H₂ e 1 mol de O₂, qual é o
-            reagente limitante e quantos mols de H₂O podem ser formados teoricamente?:</p>
+        <section class="content-card">
+            <div class="questao">
+                <h2>Questão de Fixação</h2>
+                <p> Equação: 2H₂ + O₂ → 2H₂O. Se eu tenho 4 mol de H₂ e 1 mol de O₂, qual é o
+                    reagente limitante e quantos mols de H₂O podem ser formados teoricamente?:</p>
 
-        <div class="alternativas">
-            <button onclick="responderQuestao(this, false)"><strong>A)</strong> Limitante H₂; 4 mol H₂O </button>
-            <button onclick="responderQuestao(this, false)"><strong>B)</strong> Limitante O₂; 4 mol H₂O </button>
-            <button onclick="responderQuestao(this, false)"><strong>C)</strong> Limitante H₂; 2 mol H₂O </button>
-            <button onclick="responderQuestao(this, true)"><strong>D)</strong> Limitante O₂; 2 mol H₂O </button>
-            <button onclick="responderQuestao(this, false)"><strong>E)</strong> Não há limitante; 6 mol H₂O </button>
-        </div>
+                <div class="alternativas">
+                    <button onclick="responderQuestao(this, false)"><strong>A)</strong> Limitante H₂; 4 mol H₂O
+                    </button>
+                    <button onclick="responderQuestao(this, false)"><strong>B)</strong> Limitante O₂; 4 mol H₂O
+                    </button>
+                    <button onclick="responderQuestao(this, false)"><strong>C)</strong> Limitante H₂; 2 mol H₂O
+                    </button>
+                    <button onclick="responderQuestao(this, true)"><strong>D)</strong> Limitante O₂; 2 mol H₂O </button>
+                    <button onclick="responderQuestao(this, false)"><strong>E)</strong> Não há limitante; 6 mol H₂O
+                    </button>
+                </div>
 
-        <p class="quiz-msg"></p>
+                <p class="quiz-msg"></p>
 
-        <button class="btn-resolucao" onclick="mostrarResolucao(this)"> Ver resolução
-        </button>
+                <button class="btn-resolucao" onclick="mostrarResolucao(this)"> Ver resolução
+                </button>
 
-        <div class="resolucao">
-            <p><strong>Resolução:</strong><br>
-                A equação diz que 2 mol H₂ reagem com 1 mol O₂ para
-                produzir 2 mol H₂O. Com 4 mol H₂, a proporção exigiria 2 mol O₂ (porque 4 mol H₂
-                × (1 mol O₂ / 2 mol H₂) = 2 mol O₂). Mas só há 1 mol O₂ disponível, portanto O₂ é o
-                limitante. Quantidade de H₂O obtida: cada mol de O₂ gera 2 mol H₂O (pela
-                equação: 1 mol O₂ → 2 mol H₂O). Com 1 mol O₂, teremos 2 mol H₂O.
-                Por isso, a alternativa correta é a letra <strong>D</strong>.
-            </p>
-        </div>
-    </div>    
-    </section>
+                <div class="resolucao">
+                    <p><strong>Resolução:</strong><br>
+                        A equação diz que 2 mol H₂ reagem com 1 mol O₂ para
+                        produzir 2 mol H₂O. Com 4 mol H₂, a proporção exigiria 2 mol O₂ (porque 4 mol H₂
+                        × (1 mol O₂ / 2 mol H₂) = 2 mol O₂). Mas só há 1 mol O₂ disponível, portanto O₂ é o
+                        limitante. Quantidade de H₂O obtida: cada mol de O₂ gera 2 mol H₂O (pela
+                        equação: 1 mol O₂ → 2 mol H₂O). Com 1 mol O₂, teremos 2 mol H₂O.
+                        Por isso, a alternativa correta é a letra <strong>D</strong>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <div class="questao">
+                <h2>Questão de Fixação</h2>
+                <p>A decomposição térmica do carbonato de cálcio ocorre segundo a equação: CaCO₃ → CaO + CO₂</p>
+                <p>Considerando essa reação, a decomposição de 2 mol de CaCO₃ produzirá quantos mols de dióxido de
+                    carbono?</p>
+
+                <div class="alternativas">
+                    <button onclick="responderQuestao(this, false)"><strong>A)</strong>1</button>
+                    <button onclick="responderQuestao(this, true)"><strong>B)</strong>2</button>
+                    <button onclick="responderQuestao(this, false)"><strong>C)</strong>3</button>
+                    <button onclick="responderQuestao(this, false)"><strong>D)</strong>4</button>
+                    <button onclick="responderQuestao(this, false)"><strong>E)</strong>6</button>
+                </div>
+
+                <p class="quiz-msg"></p>
+
+                <button class="btn-resolucao" onclick="mostrarResolucao(this)"> Ver resolução
+                </button>
+
+                <div class="resolucao">
+                    <p><strong>Resolução:</strong><br>
+                        A equação mostra uma <b>proporção 1:1</b><br> entre CaCO₃ e CO₂. Isso significa que para cada 1
+                        mol de CaCO₃ decomposto, forma-se 1 mol de CO₂. Logo, 2 mols produzem 2 mols.
+                        Por isso, a alternativa correta é a letra <strong>B</strong>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <div class="questao">
+                <h2>Questão de Fixação</h2>
+                <p>Sabendo que a massa molar da água é 18 g/mol, quantos mols correspondem a uma amostra de 36 g de H₂O?
+                </p>
+
+                <div class="alternativas">
+                    <button onclick="responderQuestao(this, false)"><strong>A)</strong>1</button>
+                    <button onclick="responderQuestao(this, true)"><strong>B)</strong>2</button>
+                    <button onclick="responderQuestao(this, false)"><strong>C)</strong>18</button>
+                    <button onclick="responderQuestao(this, false)"><strong>D)</strong>36</button>
+                    <button onclick="responderQuestao(this, false)"><strong>E)</strong>0,5</button>
+                </div>
+
+                <p class="quiz-msg"></p>
+
+                <button class="btn-resolucao" onclick="mostrarResolucao(this)"> Ver resolução
+                </button>
+
+                <div class="resolucao">
+                    <p><strong>Resolução:</strong><br>
+                    <p>Utiliza-se a relação:</p>
+                    <p><b>n = m / M</b><br></p>
+                    <p>n = 36 ÷ 18 = 2 mols</p>
+                    <p>As demais alternativas resultam de erros de cálculo ou confusão entre massa e quantidade de
+                        matéria.</p>
+                    Por isso, a alternativa correta é a letra <strong>B</strong>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
     </section>
 
     <script src="script.js"></script>
-
-
 </body>
 
-
 </html>
-
-
