@@ -40,88 +40,143 @@
 
     </header>
     <section class="questoes-container">
-    <section class="content-card">
-        <div class="imagem-conteudo"><img src="img/eletroquimica.jpeg" alt="Eletroquímica" class="conteudo-img"></div>
-        <h2>Eletroquímica (Redox, Pilhas e Eletrólise)</h2>
-        <p><b>Eletroquímica trata de transferência de elétrons. Surgem em temas práticos
-                (pilhas, corrosão, galvanoplastia). É frequentemente cobrada por questões de
-                identificação de agente oxidante/reduzente e interpretação de pilhas.</b><br></p>
-        <ul>
-            <li>
-                <h3>Oxidação:</h3>
-            </li>
-            <p>perda de elétrons;</p>
-            <li>
-                <h3>redução:</h3>
-            </li>
-            <p> ganho de elétrons.</p>
-            <p><b>OX = perda, RED = ganho.</b><br></p>
-            <li>
-                <h3> Agente oxidante:</h3>
-            </li>
-            <p> o que causa a oxidação do outro (ele próprio é reduzido). </p>
-            <li>
-                <h3> Agente redutor:</h3>
-            </li>
-            <p> o que causa a redução do outro (ele próprio é oxidado).</p>
-            <li>
-                <h3> Pilhas:</h3>
-            </li>
-            <p> reações espontâneas que geram corrente. Ânodo (oxidação), cátodo
-                (redução). Potencial padrão (E°) indica tendência de redução.</p>
-            <li>
-                <h3> Eletrólise:</h3>
-            </li>
-            <p> impulsa reações não espontâneas usando energia elétrica (ex.:
-                obtenção de alumínio, galvanoplastia).</p>
-            <li>
-                <h3> Aplicações:</h3>
-            </li>
-            <p> baterias, corrosão (oxidação de metais), proteção catódica.</p>
-        </ul>
+        <section class="content-card">
+            <div class="imagem-conteudo"><img src="img/eletroquimica.jpeg" alt="Eletroquímica" class="conteudo-img">
+            </div>
+            <h2>Eletroquímica (Redox, Pilhas e Eletrólise)</h2>
+            <p><b>Eletroquímica trata de transferência de elétrons. Surgem em temas práticos
+                    (pilhas, corrosão, galvanoplastia). É frequentemente cobrada por questões de
+                    identificação de agente oxidante/reduzente e interpretação de pilhas.</b><br></p>
+            <ul>
+                <li>
+                    <h3>Oxidação:</h3>
+                </li>
+                <p>perda de elétrons;</p>
+                <li>
+                    <h3>redução:</h3>
+                </li>
+                <p> ganho de elétrons.</p>
+                <p><b>OX = perda, RED = ganho.</b><br></p>
+                <li>
+                    <h3> Agente oxidante:</h3>
+                </li>
+                <p> o que causa a oxidação do outro (ele próprio é reduzido). </p>
+                <li>
+                    <h3> Agente redutor:</h3>
+                </li>
+                <p> o que causa a redução do outro (ele próprio é oxidado).</p>
+                <li>
+                    <h3> Pilhas:</h3>
+                </li>
+                <p> reações espontâneas que geram corrente. Ânodo (oxidação), cátodo
+                    (redução). Potencial padrão (E°) indica tendência de redução.</p>
+                <li>
+                    <h3> Eletrólise:</h3>
+                </li>
+                <p> impulsa reações não espontâneas usando energia elétrica (ex.:
+                    obtenção de alumínio, galvanoplastia).</p>
+                <li>
+                    <h3> Aplicações:</h3>
+                </li>
+                <p> baterias, corrosão (oxidação de metais), proteção catódica.</p>
+            </ul>
+        </section>
+
+        <section class="content-card">
+            <div class="questao">
+
+                <h2>Questão de Fixação</h2>
+                <p>Considere a meia-reação: Zn → Zn²⁺ + 2e⁻. Essa meia-reação corresponde a:</p>
+
+                <div class="alternativas">
+                    <button onclick="responderQuestao(this, false)"><strong>A)</strong> redução do Zn</button>
+                    <button onclick="responderQuestao(this, true)"><strong>B)</strong> oxidação do Zn
+                    </button>
+                    <button onclick="responderQuestao(this, false)"><strong>C)</strong> reação de neutralização</button>
+                    <button onclick="responderQuestao(this, false)"><strong>D)</strong> eletrólise do Zn²⁺</button>
+                    <button onclick="responderQuestao(this, false)"><strong>E)</strong> reação de deslocamento simples
+                        sem
+                        elétrons</button>
+                </div>
+
+                <p class="quiz-msg"></p>
+
+                <button class="btn-resolucao" onclick="mostrarResolucao(this)"> Ver resolução
+                </button>
+
+                <div class="resolucao">
+                    <p><strong>Resolução:</strong><br>
+                        A meia-reação mostra Zn perdendo dois elétrons para formar Zn²⁺;
+                        perda de elétrons é definição de oxidação. A reação é parte de um processo redox;
+                        para haver corrente, precisa existir outra meia-reação (redução) que consuma os
+                        elétrons.
+                        Por isso, a alternativa correta é a letra <strong>B</strong>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <div class="questao">
+                <h2>Questão de Fixação</h2>
+                <p>Em uma pilha eletroquímica utilizada para gerar energia elétrica, ocorre transferência espontânea de
+                    elétrons entre substâncias. O eletrodo onde ocorre a perda de elétrons é denominado:</p>
+
+                <div class="alternativas">
+                    <button onclick="responderQuestao(this, false)"><strong>A)</strong>Cátodo </button>
+                    <button onclick="responderQuestao(this, true)"><strong>B)</strong>Ânodo </button>
+                    <button onclick="responderQuestao(this, false)"><strong>C)</strong>Eletrolito </button>
+                    <button onclick="responderQuestao(this, false)"><strong>D)</strong> Ponte salina</button>
+                    <button onclick="responderQuestao(this, false)"><strong>E)</strong>Condutor externo </button>
+                </div>
+
+                <p class="quiz-msg"></p>
+
+                <button class="btn-resolucao" onclick="mostrarResolucao(this)"> Ver resolução
+                </button>
+
+                <div class="resolucao">
+                    <p><strong>Resolução:</strong><br>
+                        A <b>oxidação</b><br> é definida como a <b>perda de elétrons</b> e ocorre sempre no
+                        <b>ânodo.</b><br> Em pilhas, essa reação é espontânea e gera corrente elétrica. O cátodo, por
+                        sua vez, é o local da <b>redução</b><br> (ganho de elétrons).
+                        Por isso, a alternativa correta é a letra <strong>B</strong>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <div class="questao">
+                <h2>Questão de Fixação</h2>
+                <p>Em uma reação de oxirredução, a substância que provoca a oxidação da outra sofre, simultaneamente,
+                    qual transformação?</p>
+
+                <div class="alternativas">
+                    <button onclick="responderQuestao(this, false)"><strong>A)</strong> Oxidação</button>
+                    <button onclick="responderQuestao(this, false)"><strong>B)</strong>Neutralização </button>
+                    <button onclick="responderQuestao(this, true)"><strong>C)</strong>Redução </button>
+                    <button onclick="responderQuestao(this, false)"><strong>D)</strong>Eletrólise </button>
+                    <button onclick="responderQuestao(this, false)"><strong>E)</strong> Dissociação</button>
+                </div>
+
+                <p class="quiz-msg"></p>
+
+                <button class="btn-resolucao" onclick="mostrarResolucao(this)"> Ver resolução
+                </button>
+
+                <div class="resolucao">
+                    <p><strong>Resolução:</strong><br>
+                        O <b>agente oxidante</b><br> é aquele que <b>ganha elétrons,</b><br> sofrendo
+                        <b>redução,</b><br> enquanto provoca a oxidação da outra espécie.
+                        Por isso, a alternativa correta é a letra <strong>C</strong>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
     </section>
-
-    <section class="content-card">
-    <div class="questao">
-
-        <h2>Questão de Fixação</h2>
-        <p>Considere a meia-reação: Zn → Zn²⁺ + 2e⁻. Essa meia-reação corresponde a:</p>
-
-        <div class="alternativas">
-            <button onclick="responderQuestao(this, false)"><strong>A)</strong> redução do Zn</button>
-            <button onclick="responderQuestao(this, true)"><strong>B)</strong> oxidação do Zn
-            </button>
-            <button onclick="responderQuestao(this, false)"><strong>C)</strong> reação de neutralização</button>
-            <button onclick="responderQuestao(this, false)"><strong>D)</strong> eletrólise do Zn²⁺</button>
-            <button onclick="responderQuestao(this, false)"><strong>E)</strong> reação de deslocamento simples sem
-                elétrons</button>
-        </div>
-
-        <p class="quiz-msg"></p>
-
-        <button class="btn-resolucao" onclick="mostrarResolucao(this)"> Ver resolução
-        </button>
-
-        <div class="resolucao">
-            <p><strong>Resolução:</strong><br>
-                A meia-reação mostra Zn perdendo dois elétrons para formar Zn²⁺;
-                perda de elétrons é definição de oxidação. A reação é parte de um processo redox;
-                para haver corrente, precisa existir outra meia-reação (redução) que consuma os
-                elétrons.
-                Por isso, a alternativa correta é a letra <strong>B</strong>.
-            </p>
-        </div>
-    </div>
-    </section>
-    </section>    
     <script src="script.js"></script>
-
-
 </body>
 
-
 </html>
-
-
-
-
