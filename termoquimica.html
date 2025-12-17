@@ -42,84 +42,139 @@
 
 
     <section class="questoes-container">
-    <section class="content-card">
-        <div class="imagem-conteudo"><img src="img/termoquimica.webp" alt="Termoquímica" class="conteudo-img"></div>
-        <h2>Termoquímica</h2>
-        <b>
-            <p>Trata da energia trocada — geralmente na forma de calor — em
-                reações químicas. Sinais de entalpia (∆H) indicam se a reação libera ou absorve
-                energia.</p>
-        </b><br>
-        <ul>
-            <li>
-                <h3>∆H < 0:</h3>
-            </li>
-            <p>reação exotérmica (libera calor para o ambiente). Ex.: combustão do
-                metano.</p>
-            <li>
-                <h3>∆H > 0:</h3>
-            </li>
-            <p>reação endotérmica (absorve calor). Ex.: decomposição térmica do
-                carbonato de cálcio.</p>
-            <li>
-                <h3>Entalpia de formação:</h3>
-            </li>
-            <p>energia para formar 1 mol de substância a partir de
-                elementos em estado padrão.</p>
-            <li>
-                <h3>Lei de Hess:</h3>
-            </li>
-            <p>∆H de uma reação é a soma dos ∆H das etapas que a compõem —
-                útil para calcular ∆H não diretamente mensurável.</p>
-            <li>
-                <h3>Interpretação de diagramas de energia:</h3>
-            </li>
-            <p>altura relativa dos reagentes e produtos
-                e energia de ativação (Eₐ).</p>
-        </ul>
+        <section class="content-card">
+            <div class="imagem-conteudo"><img src="img/termoquimica.webp" alt="Termoquímica" class="conteudo-img"></div>
+            <h2>Termoquímica</h2>
+            <b>
+                <p>Trata da energia trocada — geralmente na forma de calor — em
+                    reações químicas. Sinais de entalpia (∆H) indicam se a reação libera ou absorve
+                    energia.</p>
+            </b><br>
+            <ul>
+                <li>
+                    <h3>∆H < 0:</h3>
+                </li>
+                <p>reação exotérmica (libera calor para o ambiente). Ex.: combustão do
+                    metano.</p>
+                <li>
+                    <h3>∆H > 0:</h3>
+                </li>
+                <p>reação endotérmica (absorve calor). Ex.: decomposição térmica do
+                    carbonato de cálcio.</p>
+                <li>
+                    <h3>Entalpia de formação:</h3>
+                </li>
+                <p>energia para formar 1 mol de substância a partir de
+                    elementos em estado padrão.</p>
+                <li>
+                    <h3>Lei de Hess:</h3>
+                </li>
+                <p>∆H de uma reação é a soma dos ∆H das etapas que a compõem —
+                    útil para calcular ∆H não diretamente mensurável.</p>
+                <li>
+                    <h3>Interpretação de diagramas de energia:</h3>
+                </li>
+                <p>altura relativa dos reagentes e produtos
+                    e energia de ativação (Eₐ).</p>
+            </ul>
+        </section>
+
+        <section class="content-card">
+            <div class="questao">
+                <h2>Questão de Fixação</h2>
+                <p>Uma reação é representada com ∆H = –150 kJ. Isso indica que a reação:</p>
+
+                <div class="alternativas">
+                    <button onclick="responderQuestao(this, false)"><strong>A)</strong> é endotérmica e absorve 150
+                        kJ</button>
+                    <button onclick="responderQuestao(this, true)"><strong>B)</strong> é exotérmica e libera 150
+                        kJ</button>
+                    <button onclick="responderQuestao(this, false)"><strong>C)</strong> não troca calor</button>
+                    <button onclick="responderQuestao(this, false)"><strong>D)</strong> precisa de 150 kJ para
+                        ocorrer</button>
+                    <button onclick="responderQuestao(this, false)"><strong>E)</strong> tem energia de ativação igual a
+                        150
+                        kJ</button>
+                </div>
+
+                <p class="quiz-msg"></p>
+
+                <button class="btn-resolucao" onclick="mostrarResolucao(this)"> Ver resolução
+                </button>
+
+                <div class="resolucao">
+                    <p><strong>Resolução:</strong><br>
+                        O sinal negativo de ∆H indica que a entalpia dos produtos é menor
+                        que a dos reagentes; a diferença (150 kJ) foi liberada para o ambiente. Isso
+                        descreve uma reação exotérmica. Não podemos, a partir somente do ∆H, dizer
+                        qual é a energia de ativação; essa é outra grandeza (Eₐ), tipicamente positiva, que
+                        aparece como “barreira” no diagrama energético.
+                        Por isso, a alternativa correta é a letra <strong>B</strong>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <div class="questao">
+                <h2>Questão de Fixação</h2>
+                <p>Uma reação química ocorre apenas quando recebe energia do ambiente para que os reagentes se
+                    transformem em produtos. Esse tipo de reação é caracterizado como:</p>
+
+                <div class="alternativas">
+                    <button onclick="responderQuestao(this, false)"><strong>A)</strong>Liberação de calor</button>
+                    <button onclick="responderQuestao(this, false)"><strong>B)</strong>ΔH negativo</button>
+                    <button onclick="responderQuestao(this, true)"><strong>C)</strong>Absorção de energia</button>
+                    <button onclick="responderQuestao(this, false)"><strong>D)</strong>Espontânea</button>
+                    <button onclick="responderQuestao(this, false)"><strong>E)</strong>Isotérmica</button>
+                </div>
+
+                <p class="quiz-msg"></p>
+
+                <button class="btn-resolucao" onclick="mostrarResolucao(this)"> Ver resolução
+                </button>
+
+                <div class="resolucao">
+                    <p><strong>Resolução:</strong><br>
+                        Reações endotérmicas absorvem calor, apresentando <b>ΔH positivo.</b><br> A energia dos produtos
+                        é maior que a dos reagentes.
+                        Por isso, a alternativa correta é a letra <strong>C</strong>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <div class="questao">
+                <h2>Questão de Fixação</h2>
+                <p>Processos de combustão são amplamente utilizados como fonte de energia em veículos e indústrias. Do
+                    ponto de vista termoquímico, a combustão é classificada como reação:</p>
+
+                <div class="alternativas">
+                    <button onclick="responderQuestao(this, false)"><strong>A)</strong>Endotérmica</button>
+                    <button onclick="responderQuestao(this, false)"><strong>B)</strong>Isotérmica</button>
+                    <button onclick="responderQuestao(this, true)"><strong>C)</strong>Exotérmica</button>
+                    <button onclick="responderQuestao(this, false)"><strong>D)</strong>Neutra</button>
+                    <button onclick="responderQuestao(this, false)"><strong>E)</strong>Fotoquímica</button>
+                </div>
+
+                <p class="quiz-msg"></p>
+
+                <button class="btn-resolucao" onclick="mostrarResolucao(this)"> Ver resolução
+                </button>
+
+                <div class="resolucao">
+                    <p><strong>Resolução:</strong><br>
+                        A combustão libera energia na forma de calor e luz, caracterizando uma reação exotérmica <b>(ΔH
+                            negativo).</b><br>
+                        Por isso, a alternativa correta é a letra <strong>C</strong>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
     </section>
-
-<section class="content-card">
-    <div class="questao">
-        <h2>Questão de Fixação</h2>
-        <p>Uma reação é representada com ∆H = –150 kJ. Isso indica que a reação:</p>
-
-        <div class="alternativas">
-            <button onclick="responderQuestao(this, false)"><strong>A)</strong> é endotérmica e absorve 150
-                kJ</button>
-            <button onclick="responderQuestao(this, true)"><strong>B)</strong> é exotérmica e libera 150 kJ</button>
-            <button onclick="responderQuestao(this, false)"><strong>C)</strong> não troca calor</button>
-            <button onclick="responderQuestao(this, false)"><strong>D)</strong> precisa de 150 kJ para
-                ocorrer</button>
-            <button onclick="responderQuestao(this, false)"><strong>E)</strong> tem energia de ativação igual a 150
-                kJ</button>
-        </div>
-
-        <p class="quiz-msg"></p>
-
-        <button class="btn-resolucao" onclick="mostrarResolucao(this)"> Ver resolução
-        </button>
-
-        <div class="resolucao">
-            <p><strong>Resolução:</strong><br>
-                O sinal negativo de ∆H indica que a entalpia dos produtos é menor
-                que a dos reagentes; a diferença (150 kJ) foi liberada para o ambiente. Isso
-                descreve uma reação exotérmica. Não podemos, a partir somente do ∆H, dizer
-                qual é a energia de ativação; essa é outra grandeza (Eₐ), tipicamente positiva, que
-                aparece como “barreira” no diagrama energético.
-                Por isso, a alternativa correta é a letra <strong>B</strong>.
-            </p>
-        </div>
-    </div>
-    </section>
-    </section>
-
     <script src="script.js"></script>
-
-
 </body>
 
-
 </html>
-
-
